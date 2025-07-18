@@ -1,1 +1,1 @@
-This repository is used to play around I-ADOPT variable descriptions.
+This repository is used to play around with I-ADOPT variable descriptions.
