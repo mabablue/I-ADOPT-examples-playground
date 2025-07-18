@@ -8,4 +8,4 @@ ex:PipeStateVariable
   a iop:Variable ;
   iop:hasProperty iop:CirculationMethod ;
   iop:hasObjectOfInterest ex:Water ;
-  iop:hasMatrix ex:Canalisation .
+  iop:hasMatrix ex:CanalisationPipe .
