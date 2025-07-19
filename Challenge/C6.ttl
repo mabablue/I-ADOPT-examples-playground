@@ -1,0 +1,33 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C6 a iop:Variable ;
+    rdfs:label "Mass flux of carbon into soil from vegetation due to senescence" ;
+    rdfs:comment "In accordance with common usage in geophysical disciplines, \"flux\" implies per unit area, called \"flux density\" in physics. \"Vegetation\" means any living plants e.g. trees, shrubs, grass. The specification of a physical process by the phrase \"due_to_\" process means that the quantity named is a single term in a sum of terms which together compose the general quantity named by omitting the phrase. The term \"senescence\" means loss of living biomass excluding plant death, e.g. leaf drop and other seasonal effects. The term refers to changes in the whole plant and is not confined only to leaf drop." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/23" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "due to senescence" ;
+            iop:constrains ex:C6_Prop7 ] ;
+    iop:hasMatrix ex:C6_Matrix7 ;
+    iop:hasObjectOfInterest ex:C6_OoI7 ;
+    iop:hasProperty ex:C6_Prop7 .
+
+ex:C6_Matrix7 a iop:Entity,
+        iop:System, iop:AsymmetricSystem ;
+    rdfs:label "from vegetation to soil" ;
+    iop:hasSource ex:C6_Matrix_SysA7 ;
+    iop:hasTarget ex:C6_Matrix_SysB7 .
+
+ex:C6_Matrix_SysB7 a iop:Entity ;
+    rdfs:label "soil" .
+
+ex:C6_OoI7 a iop:Entity ;
+    rdfs:label "carbon" .
+
+ex:C6_Prop7 a iop:Property ;
+    rdfs:label "mass flux" .
+
+ex:C6_Matrix_SysA7 a iop:Entity ;
+    rdfs:label "vegetation" .
+
