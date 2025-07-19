@@ -1,0 +1,19 @@
+@prefix ex: <https://example.org/data/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+ex:State-of-tube
+  a iop:Variable ;
+  iop:hasProperty iop:State ;
+  iop:hasObjectOfInterest ex:ConnectingPipe ;
+  iop:hasConstraint [
+    a iop:Constraint ;
+    iop:constrains ex:ConnectingPipe ;
+    skos:prefLabel "plastic" ; ] , 
+	[
+    a iop:Constraint ;
+    iop:constrains ex:ConnectingPipe ;
+    skos:prefLabel "30 cm diameter" ;
+  ] .
