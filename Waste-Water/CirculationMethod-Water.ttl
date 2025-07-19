@@ -4,7 +4,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 
-ex:PipeStateVariable
+ex:Circulation-Method-in-Tube
   a iop:Variable ;
   iop:hasProperty iop:CirculationMethod ;
   iop:hasObjectOfInterest ex:Water ;
