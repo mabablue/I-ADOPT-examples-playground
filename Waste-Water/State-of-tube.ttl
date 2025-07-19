@@ -4,7 +4,7 @@
 @Prefix sosa: <http://www.w3.org/ns/sosa/> .
 @Prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 
-ex:PipeStateVariable
+ex:State-of-tube
   a iop:Variable ;
   iop:hasProperty iop:State ;
   iop:hasObjectOfInterest ex:ConnectingPipe ;
