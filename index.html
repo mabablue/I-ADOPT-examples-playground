@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>I-ADOPT Variable Modelling Challenge - Current state of canonical solutions</title>
+		
+		<link href="./_app/immutable/assets/0.qZjm_zdk.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.B1H6q3u2.css" rel="stylesheet">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+    </style>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><div class="container svelte-o8cgz6"><header class="svelte-o8cgz6"><h1>I-ADOPT Variable Modelling Challenge</h1> <p>Current state of canonical solutions.</p></header> <!----><nav><div class="navBox svelte-1p0x8pv"><div class="navBoxHead">Filter</div> <div class="navBoxBody filterBody svelte-1p0x8pv"><input type="text" id="filter" placeholder="Filter Variables ..." class="svelte-1p0x8pv"/> <script>
+      (function(){
+
+        // schedule update of filter
+        let filterTimer = null;
+        document.querySelector( '#filter' )
+          ?.addEventListener( 'input', () => {
+            if ( filterTimer ) {
+              clearTimeout( filterTimer );
+            }
+            filterTimer = setTimeout( triggerFilter, 200 );
+          } );
+
+
+        function triggerFilter() {
+
+          // get filter term
+          const term = document.querySelector( '#filter' )?.value?.toLowerCase() || null;
+
+          for( const entry of document.querySelectorAll( '.variable-item') ) {
+
+            if( term ) {
+
+              // only show, if filter term is included
+              if( ! entry.textContent?.toLowerCase().includes( term ) ) {
+                entry.classList.add( 'hidden' );
+              } else {
+                entry.classList.remove( 'hidden' );
+              }
+
+            } else {
+
+              // if no filter term is set, show all entries
+              entry.classList.remove( 'hidden' );
+
+            }
+          }
+        }
+
+      })();
+    </script></div></div> <div class="navBox svelte-1p0x8pv"><div class="navBoxHead">Navigation</div> <div class="navBoxBody"><ul><!--[--><li><a href="#Challenge">Challenge</a></li><!--]--></ul></div></div><!----></nav> <main><!--[--><section><h2 id="Challenge">Challenge</h2> <ul class="variable-list svelte-14s58y4"><!--[--><li class="variable-item svelte-14s58y4"><article><h3 class="svelte-14s58y4"><a href="Challenge/C1_ElectronDensity.ttl.html">Electron density in the solar wind</a></h3> <p class="svelte-14s58y4">Density (particle per cm3) of electrons measured in the Solar Wind.</p> <a href="Challenge/C1_ElectronDensity.ttl" class="download svelte-14s58y4" title="Download RDF"><img src="rdf.svg" alt="Download RDF" class="svelte-14s58y4"/></a></article></li><!--]--></ul></section><!--]--></main><!----><!----> <footer class="svelte-o8cgz6"><p>© 2025 I-ADOPT. All rights reserved.</p></footer></div><!----><!--]--> <!--[!--><!--]--><!--]--></div>
+	</body>
+</html>

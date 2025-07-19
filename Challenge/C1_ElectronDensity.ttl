@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qudt: <http://qudt.org.vocab/quantitykind/> .
+
+ex:C1 a iop:Variable ;
+    rdfs:label "Electron density in the solar wind" ;
+    rdfs:comment "Density (particle per cm3) of electrons measured in the Solar Wind." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/18" ;
+    iop:hasMatrix <http://sweetontology.net/phenHelio/SolarWind> ;
+    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_10545> ;
+    iop:hasProperty qudt:NumberDensity .
+
+<http://sweetontology.net/phenHelio/SolarWind> a iop:Entity ;
+    rdfs:label "solar wind" .
+
+<http://purl.obolibrary.org/obo/CHEBI_10545> a iop:Entity ;
+    rdfs:label "electron" .
+
+
+
