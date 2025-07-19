@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C3 a iop:Variable ;
+    rdfs:label "Cloud cover" ;
+    rdfs:comment "The amount of sky estimated to be covered by all cloud types (cloud amount). The estimate is made to the nearest okta (eighth) and is reported on a scale which is essentially one of the nearest eighth, except that figures 0 and 8 on the scale signify a completely clear and cloudy sky, respectively, with consequent adjustment to the adjacent 1 and 7 okta intervals." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/20" ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/21920> ;
+    iop:hasObjectOfInterest <https://vocabulary.actris.nilu.no/actris_vocab/cloud> ;
+    iop:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/AreaFraction> .
+
+<http://vocabs.lter-europe.net/EnvThes/21920> a iop:Entity ;
+    rdfs:label "atmosphere" .
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/AreaFraction> a iop:Property ;
+    rdfs:label "area fraction" .
+
+<https://vocabulary.actris.nilu.no/actris_vocab/cloud> a iop:Entity ;
+    rdfs:label "cloud" .

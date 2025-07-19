@@ -1,0 +1,27 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C10 a iop:Variable ;
+    rdfs:label "Peak ground acceleration" ;
+    rdfs:comment "Peak acceleration measured on the earth surface when facing seismic events, like earthquakes." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/27" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "surface" ;
+            iop:constrains ex:C10_OoI13 ],
+                     [ a iop:Constraint ;
+            rdfs:label "during seismic events" ;
+            iop:constrains ex:C10_Prop13 ] ;
+    iop:hasObjectOfInterest ex:C10_OoI13 ;
+    iop:hasProperty ex:C10_Prop13 ;
+    iop:hasStatisticalModifier ex:C10_Mod13 .
+
+ex:C10_Mod13 a iop:StatisticalModifier ;
+    rdfs:label "maximum" .
+
+ex:C10_Prop13 a iop:Property ;
+    rdfs:label "acceleration" .
+
+ex:C10_OoI13 a iop:Entity ;
+    rdfs:label "ground" .
+

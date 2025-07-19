@@ -1,0 +1,27 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C4 a iop:Variable ;
+    rdfs:label "Atmospheric boundary layer height defined by temperature inversion" ;
+    rdfs:comment "Atmospheric boundary layer height defined by temperature inversion." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/21" ;
+    iop:hasConstraint    [ a iop:Constraint ;
+            rdfs:label "defined by temperature inversion" ;
+            iop:constrains ex:C4_OoI4 ],
+                   [ a iop:Constraint ;
+            rdfs:label "above the valley floor" ;
+            iop:constrains ex:C4_Prop4 ] ;
+    iop:hasMatrix ex:C4_Matrix4 ;
+    iop:hasObjectOfInterest ex:C4_OoI4 ;
+    iop:hasProperty ex:C4_Prop4 .
+
+ex:C4_Matrix4 a iop:Entity ;
+    rdfs:label "atmosphere" .
+
+ex:C4_OoI4 a iop:Entity ;
+    rdfs:label "atmospheric boundary layer" .
+
+ex:C4_Prop4 a iop:Property ;
+    rdfs:label "height" .
+
