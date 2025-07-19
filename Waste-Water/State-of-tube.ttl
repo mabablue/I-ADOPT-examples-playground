@@ -1,8 +1,8 @@
-@Prefix ex: <https://example.org/data/> .
-@Prefix iop: <https://w3id.org/iadopt/ont/> .
-@Prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@Prefix sosa: <http://www.w3.org/ns/sosa/> .
-@Prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix ex: <https://example.org/data/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 
 ex:State-of-tube
   a iop:Variable ;
