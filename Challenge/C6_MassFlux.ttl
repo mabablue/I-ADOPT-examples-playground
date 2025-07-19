@@ -8,26 +8,23 @@ ex:C6 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/23" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "due to senescence" ;
-            iop:constrains ex:C6_Prop7 ] ;
-    iop:hasMatrix ex:C6_Matrix7 ;
-    iop:hasObjectOfInterest ex:C6_OoI7 ;
-    iop:hasProperty ex:C6_Prop7 .
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/30361> ] ;
+    iop:hasMatrix [ a iop:System, iop:AsymmetricSystem ;
+		rdfs:label "from vegetation to soil" ;
+		iop:hasSource <http://vocabs.lter-europe.net/EnvThes/20535> ;
+		iop:hasTarget <http://vocabs.lter-europe.net/EnvThes/24> ] ;	
+    iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/20805> ;
+    iop:hasProperty <http://vocabs.lter-europe.net/EnvThes/30361> .
 
-ex:C6_Matrix7 a iop:Entity,
-        iop:System, iop:AsymmetricSystem ;
-    rdfs:label "from vegetation to soil" ;
-    iop:hasSource ex:C6_Matrix_SysA7 ;
-    iop:hasTarget ex:C6_Matrix_SysB7 .
-
-ex:C6_Matrix_SysB7 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/24> a iop:Entity ;
     rdfs:label "soil" .
 
-ex:C6_OoI7 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/20805> a iop:Entity ;
     rdfs:label "carbon" .
 
-ex:C6_Prop7 a iop:Property ;
+<http://vocabs.lter-europe.net/EnvThes/30361> a iop:Property ;
     rdfs:label "mass flux" .
 
-ex:C6_Matrix_SysA7 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/20535> a iop:Entity ;
     rdfs:label "vegetation" .
 
