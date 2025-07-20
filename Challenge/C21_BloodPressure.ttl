@@ -1,0 +1,26 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C21 a iop:Variable ;
+    rdfs:label "Resting systolic blood pressure" ;
+    rdfs:comment "Resting blood pressure systolic in millimeters of mercury (mmHg)" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/38" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "resting" ;
+            iop:constrains <http://purl.obolibrary.org/obo/NCIT_C14225> ],
+        [ a iop:Constraint ;
+            rdfs:label "systolic" ;
+            iop:constrains <http://qudt.org/vocab/quantitykind/Pressure> ] ;
+    iop:hasMatrix <http://purl.obolibrary.org/obo/NCIT_C14225> ;
+    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/UBERON_0000178> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/Pressure> .
+
+<http://purl.obolibrary.org/obo/UBERON_0000178> a iop:Entity ;
+    rdfs:label "blood" .
+
+<http://purl.obolibrary.org/obo/NCIT_C14225> a iop:Entity ;
+    rdfs:label "human" .
+
+<http://qudt.org/vocab/quantitykind/Pressure> a iop:Property ;
+    rdfs:label "pressure" .
