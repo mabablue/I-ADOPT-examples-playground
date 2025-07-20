@@ -8,26 +8,25 @@ ex:C16 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/33" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "ectotherm" ;
-            iop:constrains ex:C16_Matrix22 ],
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/26> ],
         [ a iop:Constraint ;
             rdfs:label "due to metabolism" ;
-            iop:constrains ex:C16_Prop22 ],
+            iop:constrains <http://qudt.org/vocab/quantitykind/MassFlowRate> ],
         [ a iop:Constraint ;
             rdfs:label "non-stressed" ;
-            iop:constrains ex:C16_Matrix22 ],
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/26> ],
         [ a iop:Constraint ;
             rdfs:label "non-active" ;
-            iop:constrains ex:C16_Matrix22 ] ;
-    iop:hasMatrix ex:C16_Matrix22 ;
-    iop:hasObjectOfInterest ex:C16_OoI22 ;
-    iop:hasProperty ex:C16_Prop22 .
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/26> ] ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/26> ;
+    iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/20850> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/MassFlowRate> .
 
-ex:C16_OoI22 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/20850> a iop:Entity ;
     rdfs:label "oxygen" .
 
-ex:C16_Prop22 a iop:Property ;
+<http://qudt.org/vocab/quantitykind/MassFlowRate> a iop:Property ;
     rdfs:label "mass flow rate" .
 
-ex:C16_Matrix22 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/26> a iop:Entity ;
     rdfs:label "organism" .
-
