@@ -1,0 +1,27 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C15 a iop:Variable ;
+    rdfs:label "Foraminifera, planktic, size" ;
+    rdfs:comment "Size of planktic foraminifers in surface sediments, see https://doi.pangaea.de/10.1594/PANGAEA.126730" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/32" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "planctonic" ;
+            iop:constrains ex:C15_OoI21 ],
+                 [ a iop:Constraint ;
+            rdfs:label "surface" ;
+            iop:constrains ex:C15_Matrix21 ];
+    iop:hasMatrix ex:C15_Matrix21 ;
+    iop:hasObjectOfInterest ex:C15_OoI21 ;
+    iop:hasProperty ex:C15_Prop21 .
+
+ex:C15_Matrix21 a iop:Entity ;
+    rdfs:label "sediment" .
+
+ex:C15_Prop21 a iop:Property ;
+    rdfs:label "size" .
+
+ex:C15_OoI21 a iop:Entity ;
+    rdfs:label "foraminfers" .
+

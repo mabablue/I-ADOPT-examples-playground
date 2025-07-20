@@ -1,0 +1,17 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C12 a iop:Variable ;
+    rdfs:label "Probablity of occurence of habitat" ;
+    rdfs:comment "Part of terrestrial Ecosystem distribution of terrestrial EUNIS Habitats EBV, probability of occurrence of EUNIS habitats within contiguous spatial units (grid cells of 100x100 m) across the EU over 1 year time. https://github.com/EuropaBON/EBV-Descriptions/wiki/Terrestrial-Ecosystem-distribution-of-terrestrial-EUNIS-Habitats" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/29" ;
+    iop:hasObjectOfInterest ex:C12_OoI17 ;
+    iop:hasProperty ex:C12_Prop17 .
+
+ex:C12_Prop17 a iop:Property ;
+    rdfs:label "probability " .
+
+ex:C12_OoI17 a iop:Entity ;
+    rdfs:label "habitat" .
+

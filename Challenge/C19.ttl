@@ -1,0 +1,36 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C19 a iop:Variable ;
+    rdfs:label "Weight specific-ingestion Carbon rate at 15 °C" ;
+    rdfs:comment "The amount of carbon consumed by an organism at non-limiting concentration of food relative to the individual dry weight measured at 15°C. It is expressed as μg C mg DW−1 h−1" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/36" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "weight-specific" ;
+            iop:constrains ex:C19_Prop28 ],
+        [ a iop:Constraint ;
+            rdfs:label "dry" ;
+            iop:constrains ex:C19_Matrix28 ],
+        [ a iop:Constraint ;
+            rdfs:label "at non-limiting conditions" ;
+            iop:constrains ex:C19_OoI28 ],
+        [ a iop:Constraint ;
+            rdfs:label "at 15°C temperature" ;
+            iop:constrains ex:C19_Prop28 ],
+        [ a iop:Constraint ;
+            rdfs:label "due to ingestion" ;
+            iop:constrains ex:C19_Prop28 ] ;
+    iop:hasMatrix ex:C19_Matrix28 ;
+    iop:hasObjectOfInterest ex:C19_OoI28 ;
+    iop:hasProperty ex:C19_Prop28 .
+
+ex:C19_OoI28 a iop:Entity ;
+    rdfs:label "Carbon" .
+
+ex:C19_Matrix28 a iop:Entity ;
+    rdfs:label "organism" .
+
+ex:C19_Prop28 a iop:Property ;
+    rdfs:label "mass flow rate" .
+
