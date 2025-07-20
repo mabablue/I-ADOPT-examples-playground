@@ -1,0 +1,33 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C16 a iop:Variable ;
+    rdfs:label "Standard metabolic rate in mg of Oxygen per hour" ;
+    rdfs:comment "The measure of an ectotherm animal's baseline metabolic rate (i.e. non-active, non-stressed) measured by the milligrams of oxygen consumed in a period of time of one hour." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/33" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "ectotherm" ;
+            iop:constrains ex:C16_Matrix22 ],
+        [ a iop:Constraint ;
+            rdfs:label "due to metabolism" ;
+            iop:constrains ex:C16_Prop22 ],
+        [ a iop:Constraint ;
+            rdfs:label "non-stressed" ;
+            iop:constrains ex:C16_Matrix22 ],
+        [ a iop:Constraint ;
+            rdfs:label "non-active" ;
+            iop:constrains ex:C16_Matrix22 ] ;
+    iop:hasMatrix ex:C16_Matrix22 ;
+    iop:hasObjectOfInterest ex:C16_OoI22 ;
+    iop:hasProperty ex:C16_Prop22 .
+
+ex:C16_OoI22 a iop:Entity ;
+    rdfs:label "oxygen" .
+
+ex:C16_Prop22 a iop:Property ;
+    rdfs:label "mass flow rate" .
+
+ex:C16_Matrix22 a iop:Entity ;
+    rdfs:label "organism" .
+

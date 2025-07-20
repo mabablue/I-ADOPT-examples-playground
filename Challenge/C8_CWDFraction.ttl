@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C8 a iop:Variable ;
+    rdfs:label "Coarse woody debris abundance" ;
+    rdfs:comment "CWD abundance per hectare (m2/hectare) is the abundance of CWD measured from all the plots/transects scaled to a hectare (100 x 100 m). They are calculated using the formula (see https://www.sciencedirect.com/science/article/pii/S037811270900783X)" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/25" ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/30365> ;
+    iop:hasObjectOfInterest <https://lod.nal.usda.gov/nalt/104904> ;
+    iop:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/AreaFraction> .
+
+<http://vocabs.lter-europe.net/EnvThes/30365> a iop:Entity ;
+    rdfs:label "ground" .
+
+<https://lod.nal.usda.gov/nalt/104904> a iop:Entity ;
+    rdfs:label "coarse woody debris" .
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/AreaFraction> a iop:Property ;
+    rdfs:label "area fraction" .
+
