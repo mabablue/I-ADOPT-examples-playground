@@ -2,10 +2,18 @@
  * @typedef {Object.<string, string>} Localized
  */
 
-export const VALID_SYSTEM_PROPERTIES = [
+export const VALID_SYMMETRIC_SYSTEM_PROPERTIES = [
+  'hasPart',
+];
+
+export const VALID_ASYMMETRIC_SYSTEM_PROPERTIES = [
   'hasSource',
   'hasTarget',
-  'hasPart'
+];
+
+export const VALID_SYSTEM_PROPERTIES = [
+  ...VALID_SYMMETRIC_SYSTEM_PROPERTIES,
+  ...VALID_ASYMMETRIC_SYSTEM_PROPERTIES,
 ];
 
 
@@ -100,7 +108,7 @@ export class Concept {
    * @returns {string}
    */
   getIri(){
-    return this._iri;
+    return this._isBlank ? null : this._iri;
   }
 
 
@@ -109,7 +117,7 @@ export class Concept {
    * @returns {string}
    */
   getShortIri(){
-    return this._shortIri;
+    return this._isBlank ? null : this._shortIri;
   }
 
 
@@ -124,8 +132,8 @@ export class Concept {
 
   /**
    *
-   * @params {string} lang
-   * @params {string} label
+   * @param {string} lang
+   * @param {string} label
    */
   setLabel( lang, label ){
     this._label[ lang ] = label;
@@ -160,8 +168,8 @@ export class Concept {
 
   /**
    *
-   * @params {string} lang
-   * @params {string} comment
+   * @param {string} lang
+   * @param {string} comment
    */
   setComment( lang, comment ){
     this._comment[ lang ] = comment;
@@ -382,6 +390,14 @@ export class Variable extends Concept {
     return this.#constraints.slice( 0 );
   }
 
+  /**
+   *
+   * @returns {string}
+   */
+  getClassLabel() {
+    return 'Variable';
+  }
+
 
   toString() {
     return `[Variable ${ this._iri ? `(${this._iri})` : '(_blank)' }`
@@ -431,6 +447,14 @@ export class Constraint extends Concept {
    */
   getEntities() {
     return this.#constrains.slice( 0 );
+  }
+
+  /**
+   *
+   * @returns {string}
+   */
+  getClassLabel() {
+    return 'Constraint';
   }
 
 
@@ -545,6 +569,7 @@ export class Entity extends Concept {
       }, {} );
   }
 
+
   /**
    *
    * @returns {number}
@@ -561,6 +586,29 @@ export class Entity extends Concept {
    */
   isSystem() {
     return Object.keys( this.#systemComponents ).length > 0;
+  }
+
+
+  /**
+   *
+   * @returns {string}
+   */
+  getClassLabel() {
+
+    switch( true ) {
+
+      case this.getRole() == 'StatisticalModifier':
+        return 'Stat. Mod.';
+
+      case VALID_SYMMETRIC_SYSTEM_PROPERTIES.some( (prop) => prop in this.#systemComponents ):
+        return 'SymmetricSystem';
+
+      case VALID_ASYMMETRIC_SYSTEM_PROPERTIES.some( (prop) => prop in this.#systemComponents ):
+        return 'AsymmetricSystem';
+
+      default: return 'Entity';
+    }
+
   }
 
 
@@ -619,6 +667,10 @@ export class Entity extends Concept {
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
 export class Property extends Entity {
+
+  getClassLabel() {
+    return 'Property';
+  }
 
   toString() {
     return `[Entity ${ this._iri ? `(${this._iri})` : '(_blank)' }`

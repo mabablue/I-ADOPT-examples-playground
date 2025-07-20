@@ -9,10 +9,12 @@ ex:C6 a iop:Variable ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "due to senescence" ;
             iop:constrains <http://vocabs.lter-europe.net/EnvThes/30361> ] ;
-    iop:hasMatrix [ a iop:System, iop:AsymmetricSystem ;
-		rdfs:label "from vegetation to soil" ;
-		iop:hasSource <http://vocabs.lter-europe.net/EnvThes/20535> ;
-		iop:hasTarget <http://vocabs.lter-europe.net/EnvThes/24> ] ;	
+    iop:hasMatrix [
+      a iop:System, iop:AsymmetricSystem ;
+		  rdfs:label "from vegetation to soil" ;
+		  iop:hasSource <http://vocabs.lter-europe.net/EnvThes/20535> ;
+		  iop:hasTarget <http://vocabs.lter-europe.net/EnvThes/24>
+    ] ;
     iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/20805> ;
     iop:hasProperty <http://vocabs.lter-europe.net/EnvThes/30361> .
 
