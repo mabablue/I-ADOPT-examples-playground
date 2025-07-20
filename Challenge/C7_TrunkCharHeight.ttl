@@ -8,21 +8,21 @@ ex:C7 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/24" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "aboveground" ;
-            iop:constrains ex:C7_Prop10 ] ;
-    iop:hasMatrix ex:C7_Matrix10 ;
-    iop:hasObjectOfInterest ex:C7_OoI10 ;
-    iop:hasProperty ex:C7_Prop10 ;
-    iop:hasStatisticalModifier ex:C7_Mod10 .
+            iop:constrains <http://qudt.org/vocab/quantitykind/Height> ] ;
+    iop:hasMatrix <http://purl.jp/bio/4/id/200906090403689217> ;
+    iop:hasObjectOfInterest <http://purl.jp/bio/4/id/200906050801342950> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/Height> ;
+    iop:hasStatisticalModifier <http://www.ontology-of-units-of-measure.org/resource/om-2/maximum>.
 
-ex:C7_Matrix10 a iop:Entity ;
+<http://purl.jp/bio/4/id/200906090403689217> a iop:Entity ;
     rdfs:label "tree trunk" .
 
-ex:C7_Mod10 a iop:StatisticalModifier ;
+<http://www.ontology-of-units-of-measure.org/resource/om-2/maximum> a iop:StatisticalModifier ;
     rdfs:label "maximum" .
 
-ex:C7_OoI10 a iop:Entity ;
+<http://purl.jp/bio/4/id/200906050801342950> a iop:Entity ;
     rdfs:label "char" .
 
-ex:C7_Prop10 a iop:Property ;
+<http://qudt.org/vocab/quantitykind/Height> a iop:Property ;
     rdfs:label "height" .
 

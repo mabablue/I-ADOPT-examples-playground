@@ -8,17 +8,17 @@ ex:C9 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/26" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "lower canopy strata" ;
-            iop:constrains ex:C9_OoI12 ] ;
-    iop:hasMatrix ex:C9_Matrix12 ;
-    iop:hasObjectOfInterest ex:C9_OoI12 ;
-    iop:hasProperty ex:C9_Prop12 .
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/30365> ] ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/30365> ;
+    iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/30365>;
+    iop:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/AreaFraction> .
 
-ex:C9_Matrix12 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/30365> a iop:Entity ;
     rdfs:label "ground" .
 
-ex:C9_Prop12 a iop:Property ;
+<http://www.ontology-of-units-of-measure.org/resource/om-2/AreaFraction> a iop:Property ;
     rdfs:label "area fraction" .
 
-ex:C9_OoI12 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/30365> a iop:Entity ;
     rdfs:label "foliage" .
 
