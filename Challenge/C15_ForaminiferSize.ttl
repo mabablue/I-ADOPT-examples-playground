@@ -8,20 +8,20 @@ ex:C15 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/32" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "planctonic" ;
-            iop:constrains ex:C15_OoI21 ],
+            iop:constrains <https://www.gbif.org/species/8376456> ],
                  [ a iop:Constraint ;
             rdfs:label "surface" ;
-            iop:constrains ex:C15_Matrix21 ];
-    iop:hasMatrix ex:C15_Matrix21 ;
-    iop:hasObjectOfInterest ex:C15_OoI21 ;
-    iop:hasProperty ex:C15_Prop21 .
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/20899> ];
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/20899> ;
+    iop:hasObjectOfInterest <https://www.gbif.org/species/8376456> ;
+    iop:hasProperty <https://kos.lifewatch.eu/thesauri/phytotraits/c_15> .
 
-ex:C15_Matrix21 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/20899> a iop:Entity ;
     rdfs:label "sediment" .
 
-ex:C15_Prop21 a iop:Property ;
+<https://kos.lifewatch.eu/thesauri/phytotraits/c_15> a iop:Property ;
     rdfs:label "size" .
 
-ex:C15_OoI21 a iop:Entity ;
-    rdfs:label "foraminfers" .
+<https://www.gbif.org/species/8376456> a iop:Entity ;
+    rdfs:label "foraminfera" .
 

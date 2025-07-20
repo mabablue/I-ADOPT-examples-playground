@@ -6,12 +6,12 @@ ex:C18 a iop:Variable ;
     rdfs:label "Biological sex" ;
     rdfs:comment "Biological sex [female | male | intersex | unknown]" ;
     ex:issue "https://github.com/i-adopt/examples/issues/35" ;
-    iop:hasObjectOfInterest ex:C18_OoI27 ;
-    iop:hasProperty ex:C18_Prop27 .
+    iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/26> ;
+    iop:hasProperty <http://semanticscience.org/resource/SIO_010029> .
 
-ex:C18_OoI27 a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/26> a iop:Entity ;
     rdfs:label "organism" .
 
-ex:C18_Prop27 a iop:Property ;
+<http://semanticscience.org/resource/SIO_010029> a iop:Property ;
     rdfs:label "biological sex" .
 

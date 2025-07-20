@@ -8,13 +8,13 @@ ex:C14 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/31" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "free of feral" ;
-            iop:constrains ex:C14_OoI20 ] ;
-    iop:hasObjectOfInterest ex:C14_OoI20 ;
-    iop:hasProperty ex:C14_Prop20 .
+            iop:constrains <http://opendata.inrae.fr/thesaurusINRAE/c_1152> ] ;
+    iop:hasObjectOfInterest <http://opendata.inrae.fr/thesaurusINRAE/c_1152> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/Area> .
 
-ex:C14_Prop20 a iop:Property ;
+<http://qudt.org/vocab/quantitykind/Area> a iop:Property ;
     rdfs:label "area" .
 
-ex:C14_OoI20 a iop:Entity ;
+<http://opendata.inrae.fr/thesaurusINRAE/c_1152> a iop:Entity ;
     rdfs:label "enclosure" .
 
