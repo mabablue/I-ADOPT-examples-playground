@@ -8,17 +8,17 @@ ex:C24 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/41" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "entering the cell" ;
-            iop:constrains <http://purl.obolibrary.org/obo/CHEBI_50803> ] ;
+            iop:constrains <https://materialsmine.org/ns/Particle> ] ;
     iop:hasMatrix <http://purl.obolibrary.org/obo/NCIT_C33974> ;
-    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_50803> ;
+    iop:hasObjectOfInterest <https://materialsmine.org/ns/Particle> ;
     iop:hasProperty <https://www.wikidata.org/wiki/Q108914965> .
 
 
 <http://purl.obolibrary.org/obo/NCIT_C33974> a iop:Entity ;
     rdfs:label "cell surface" .
 
-<http://purl.obolibrary.org/obo/CHEBI_50803> a iop:Entity ;
-    rdfs:label "nanoparticle" .
+<https://materialsmine.org/ns/Particle> a iop:Entity ;
+    rdfs:label "particle" .
 
 <https://www.wikidata.org/wiki/Q108914965> a iop:Property ;
     rdfs:label "count per area" .

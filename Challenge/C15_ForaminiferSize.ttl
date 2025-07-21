@@ -8,12 +8,12 @@ ex:C15 a iop:Variable ;
     ex:issue "https://github.com/i-adopt/examples/issues/32" ;
     iop:hasConstraint [ a iop:Constraint ;
             rdfs:label "planctonic" ;
-            iop:constrains <https://www.gbif.org/species/8376456> ],
+            iop:constrains <https://www.wikidata.org/wiki/Q107027> ],
                  [ a iop:Constraint ;
             rdfs:label "surface" ;
             iop:constrains <http://vocabs.lter-europe.net/EnvThes/20899> ];
     iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/20899> ;
-    iop:hasObjectOfInterest <https://www.gbif.org/species/8376456> ;
+    iop:hasObjectOfInterest <https://www.wikidata.org/wiki/Q107027> ;
     iop:hasProperty <https://kos.lifewatch.eu/thesauri/phytotraits/c_15> .
 
 <http://vocabs.lter-europe.net/EnvThes/20899> a iop:Entity ;
@@ -22,6 +22,6 @@ ex:C15 a iop:Variable ;
 <https://kos.lifewatch.eu/thesauri/phytotraits/c_15> a iop:Property ;
     rdfs:label "size" .
 
-<https://www.gbif.org/species/8376456> a iop:Entity ;
+<https://www.wikidata.org/wiki/Q107027> a iop:Entity ;
     rdfs:label "foraminfera" .
 
