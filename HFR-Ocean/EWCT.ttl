@@ -1,0 +1,33 @@
+@prefix ex: <http://example.org/iadopt/HFR> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:EWCT a iop:Variable ;
+    rdfs:label "Surface eastward sea water velocity" ;
+    rdfs:comment "West-to-East component of the velocity of the sea water current on the sea surface" ;
+    ex:issue "https://github.com/i-adopt/OMSmodelling/issues/1" ;
+    iop:hasMatrix <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
+    iop:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/Velocity> ;
+	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
+	iop:hasConstraint [a iop:Constraint ;
+                       rdfs:label "eastward" ;
+                       iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ] . 				   
+	
+
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
+    rdfs:label "surface water" .
+
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
+    rdfs:label "water current" .
+	
+<http://qudt.org/vocab/quantitykind/Velocity> a iop:Property ;
+    rdfs:label "velocity" .
+	
+<http://opendata.inrae.fr/thesaurusINRAE/c_1384> a iop:ContextObject ;
+    rdfs:label "sea" .
+	
+	
+
+
+
