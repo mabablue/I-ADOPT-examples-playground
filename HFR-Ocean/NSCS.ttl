@@ -9,11 +9,8 @@ ex:NSCS a iop:Variable ;
     iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/22225> ;
     iop:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
 	iop:hasStatisticalModifier <http://www.ontology-of-units-of-measure.org/resource/om-2/standardDeviation> ;
-    iop:hasProperty <http://qudt.org/vocab/quantitykind/Velocity> ;
-	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
-	iop:hasConstraint [a iop:Constraint ;
-                       rdfs:label "northward" ;
-                       iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ] . 				   
+    iop:hasProperty <http://vocab.nerc.ac.uk/collection/S06/current/S0600154/> ;
+	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> .				   
 	
 
 <http://vocabs.lter-europe.net/EnvThes/22225> a iop:Entity ;
@@ -22,8 +19,8 @@ ex:NSCS a iop:Variable ;
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
     rdfs:label "water current" .
 	
-<http://qudt.org/vocab/quantitykind/Velocity> a iop:Property ;
-    rdfs:label "velocity" .
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600154/> a iop:Property ;
+    rdfs:label "northward velocity" .
 	
 <http://opendata.inrae.fr/thesaurusINRAE/c_1384> a iop:ContextObject ;
     rdfs:label "sea" .
