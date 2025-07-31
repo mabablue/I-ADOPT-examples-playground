@@ -6,7 +6,7 @@ ex:RadVelErrHF a iop:Variable ;
     rdfs:label "Radial velocity (away from) standard error of water current relative to instrument in the water body" ;
     rdfs:comment "The standard error of the mean (defined as the standard deviation divided by the square root of the sample size) of multiple determinations of the specified phenomenon." ;
     ex:issue "https://github.com/i-adopt/OMSmodelling/issues/1" ;
-    iop:hasMatrix <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/22225> ;
 	iop:hasStatisticalModifier <http://purl.obolibrary.org/obo/OBI_0000235> ;
     iop:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasProperty <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
@@ -16,7 +16,7 @@ ex:RadVelErrHF a iop:Variable ;
                        iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ] . 				   
 	
 
-<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/22225> a iop:Entity ;
     rdfs:label "surface water" .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
