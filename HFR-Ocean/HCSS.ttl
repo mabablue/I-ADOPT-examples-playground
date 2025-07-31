@@ -13,7 +13,10 @@ ex:HCSS a iop:Variable ;
 	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
 	iop:hasConstraint [a iop:Constraint ;
                        rdfs:label "over a specific time period" ;
-                       iop:constrains <http://purl.obolibrary.org/obo/STATO_0000113> ] . 				   
+                       iop:constrains <http://purl.obolibrary.org/obo/STATO_0000113> ], 
+                      [a iop:Constraint ;
+                       rdfs:label "relative to instrument" ;
+                       iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ] . 				   
 	   
 	
 
