@@ -10,19 +10,20 @@ ex:RadVelDirHF a iop:Variable ;
 	iop:hasObjectOfInterest [
       a iop:System, iop:AsymmetricSystem ;
 		  rdfs:label "radial vector relative to instrument and True North" ;
-		  iop:hasSource <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
-		  iop:hasTarget <http://purl.obolibrary.org/obo/PATO_0045091>
+		  iop:hasSource <http://purl.obolibrary.org/obo/PATO_0045091> ;
+		  iop:hasTarget <http://purl.obolibrary.org/obo/ERO_0000004>
     ] ;
     iop:hasProperty <http://qudt.org/vocab/quantitykind/Angle> ;
-	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
-	iop:hasConstraint [a iop:Constraint ;
-                       rdfs:label "relative to instrument" ;
-                       iop:constrains <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ] . 				   
+	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> .
+	   
 	
 
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
     rdfs:label "water current" .
+	
+<http://purl.obolibrary.org/obo/ERO_0000004> a iop:Entity ;
+    rdfs:label "instrument" .
 	
 <http://qudt.org/vocab/quantitykind/Angle> a iop:Property ;
     rdfs:label "angle" .
