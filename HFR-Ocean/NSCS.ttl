@@ -6,7 +6,7 @@ ex:NSCS a iop:Variable ;
     rdfs:label "Standard deviation of surface northward sea water velocity" ;
     rdfs:comment "Standard deviation of multiple measurements taken in a specified time interval (temporal integration time) of the South-to-North component of the velocity of the sea water current on the sea surface" ;
     ex:issue "https://github.com/i-adopt/OMSmodelling/issues/1" ;
-    iop:hasMatrix <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/22225> ;
     iop:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
 	iop:hasStatisticalModifier <http://www.ontology-of-units-of-measure.org/resource/om-2/standardDeviation> ;
     iop:hasProperty <http://qudt.org/vocab/quantitykind/Velocity> ;
@@ -16,7 +16,7 @@ ex:NSCS a iop:Variable ;
                        iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ] . 				   
 	
 
-<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
+<http://vocabs.lter-europe.net/EnvThes/22225> a iop:Entity ;
     rdfs:label "surface water" .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
