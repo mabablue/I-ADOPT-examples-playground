@@ -21,6 +21,12 @@ ex:C19 a iop:Variable ;
         [ a iop:Constraint ;
             rdfs:label "due to ingestion" ;
             iop:constrains <http://qudt.org/vocab/quantitykind/MassFlowRate> ] ;
+    iop:hasMatrix [
+      a iop:System, iop:AsymmetricSystem ;
+		  rdfs:label "from food to organism" ;
+		  iop:hasSource <http://vocabs.lter-europe.net/EnvThes/20523> ;
+		  iop:hasTarget <http://vocabs.lter-europe.net/EnvThes/26>
+    ] ;
     iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/26> ;
     iop:hasObjectOfInterest <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27594> ;
     iop:hasProperty <http://qudt.org/vocab/quantitykind/MassFlowRate> .
@@ -33,4 +39,6 @@ ex:C19 a iop:Variable ;
 
 <http://qudt.org/vocab/quantitykind/MassFlowRate> a iop:Property ;
     rdfs:label "mass flow rate" .
-
+	
+<http://vocabs.lter-europe.net/EnvThes/20523> a iop:Entity ;
+    rdfs:label "food" .
