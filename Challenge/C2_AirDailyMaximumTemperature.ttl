@@ -12,7 +12,7 @@ ex:C2 a iop:Variable ;
             iop:constrains <http://www.ontology-of-units-of-measure.org/resource/om-2/maximum> ],
            [ a iop:Constraint ;
             rdfs:label "1,7 m aboveground" ;
-            iop:constrains <http://vocabs.lter-europe.net/EnvThes/23>] ;
+            iop:constrains <http://qudt.org/vocab/quantitykind/Temperature>] ;
     iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/21920> ;
     iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/23> ;
     iop:hasProperty <http://qudt.org/vocab/quantitykind/Temperature> ;
