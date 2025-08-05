@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/iadopt/challenge/> .
+o@prefix ex: <http://example.org/iadopt/challenge/> .
 @prefix iop: <https://w3id.org/iadopt/ont/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -10,7 +10,7 @@ ex:C10 a iop:Variable ;
             rdfs:label "surface" ;
             iop:constrains <http://vocabs.lter-europe.net/EnvThes/30365> ],
                      [ a iop:Constraint ;
-            rdfs:label "during seismic events" ;
+            rdfs:label "due to seismic event" ;
             iop:constrains <https://qudt.org/vocab/quantitykind/Acceleration> ] ;
     iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/30365> ;
     iop:hasProperty <https://qudt.org/vocab/quantitykind/Acceleration> ;
