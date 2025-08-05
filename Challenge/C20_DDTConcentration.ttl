@@ -7,8 +7,8 @@ ex:C20 a iop:Variable ;
     rdfs:comment "Concentration of DDT in a given year at a site impacted by industry." ;
     ex:issue "https://github.com/i-adopt/examples/issues/37" ;
     iop:hasConstraint [ a iop:Constraint ;
-            rdfs:label "impacted by industry" ;
-            iop:constrains <http://vocabs.lter-europe.net/EnvThes/24> ] ;
+            rdfs:label "due to industry" ;
+            iop:constrains <http://qudt.org/vocab/quantitykind/MassFraction> ] ;
     iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/24> ;
     iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_16130> ;
     iop:hasProperty <http://qudt.org/vocab/quantitykind/MassFraction> .
