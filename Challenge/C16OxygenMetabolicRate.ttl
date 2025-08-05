@@ -18,15 +18,20 @@ ex:C16 a iop:Variable ;
         [ a iop:Constraint ;
             rdfs:label "non-active" ;
             iop:constrains <http://vocabs.lter-europe.net/EnvThes/26> ] ;
-    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/26> ;
+    iop:hasMatrix [
+      a iop:System, iop:AsymmetricSystem ;
+		  rdfs:label "from air to organism" ;
+		  iop:hasSource <http://vocabs.lter-europe.net/EnvThes/23> ;
+		  iop:hasTarget <http://vocabs.lter-europe.net/EnvThes/26>
+    ] ;
     iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/20850> ;
     iop:hasProperty <http://qudt.org/vocab/quantitykind/MassFlowRate> .
 
 <http://vocabs.lter-europe.net/EnvThes/20850> a iop:Entity ;
     rdfs:label "oxygen" .
-
-<http://qudt.org/vocab/quantitykind/MassFlowRate> a iop:Property ;
-    rdfs:label "mass flow rate" .
+	
+<http://vocabs.lter-europe.net/EnvThes/23> a iop:Entity ;
+    rdfs:label "air" . 
 
 <http://vocabs.lter-europe.net/EnvThes/26> a iop:Entity ;
-    rdfs:label "organism" .
+    rdfs:label "organism" . 
