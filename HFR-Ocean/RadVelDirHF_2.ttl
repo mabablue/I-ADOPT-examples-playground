@@ -12,18 +12,16 @@ ex:RadVelDirHF a iop:Variable ;
 	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
 
 	iop:hasConstraint [a iop:Constraint ;
-                       rdfs:label "relative to instrument" ;
+                       rdfs:label "relative to True North" ;
                        iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600112/> ] ;
-  iop:hasConstraint [a iop:Constraint ; 
-                rdfs:label "radial component of velocity" ;
-                iop:constrains <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ] .
+ 	iop:hasConstraint [a iop:Constraint ;
+                       rdfs:label "surface water"; a <http://vocabs.lter-europe.net/EnvThes/30264> ;
+                       iop:constrains <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ] .
    
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
     rdfs:label "water current" .
 	
-<http://purl.obolibrary.org/obo/ERO_0000004> a iop:Entity ;
-    rdfs:label "instrument" .
 	
 <http://vocab.nerc.ac.uk/collection/S06/current/S0600112/> a iop:Property ;
     rdfs:label "direction (from)" .
