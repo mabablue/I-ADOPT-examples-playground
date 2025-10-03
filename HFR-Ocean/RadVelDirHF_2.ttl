@@ -9,14 +9,12 @@ ex:RadVelDirHF a iop:Variable ;
     iop:hasMatrix <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
 	iop:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasProperty <http://vocab.nerc.ac.uk/collection/S06/current/S0600112/> ;
-	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
-
 	iop:hasConstraint [a iop:Constraint ;
                        rdfs:label "relative to True North" ;
                        iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600112/> ] ;
  	iop:hasConstraint [a iop:Constraint ;
                        rdfs:label "surface water"; a <http://vocabs.lter-europe.net/EnvThes/30264> ;
-                       iop:constrains <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ] .
+                       iop:constrains <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ] .
    
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
@@ -26,7 +24,7 @@ ex:RadVelDirHF a iop:Variable ;
 <http://vocab.nerc.ac.uk/collection/S06/current/S0600112/> a iop:Property ;
     rdfs:label "direction (from)" .
 	
-<http://opendata.inrae.fr/thesaurusINRAE/c_1384> a iop:ContextObject ;
+<http://opendata.inrae.fr/thesaurusINRAE/c_1384> a iop:Entity ;
     rdfs:label "sea" .
 
 
