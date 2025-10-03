@@ -6,7 +6,7 @@ ex:RadVelDirHF a iop:Variable ;
     rdfs:label "Direction (from) of radial vector relative to instrument and True North in the water body" ;
     rdfs:comment "The compass direction in degrees positive clockwise from True North of the radial component of water velocity in a water body." ;
     ex:issue "https://github.com/i-adopt/OMSmodelling/issues/1" ;
-    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/30264> ;
+    iop:hasMatrix <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
 	iop:hasObjectOfInterest <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasProperty <http://vocab.nerc.ac.uk/collection/S06/current/S0600112/> ;
 	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
@@ -28,11 +28,7 @@ ex:RadVelDirHF a iop:Variable ;
 	
 <http://opendata.inrae.fr/thesaurusINRAE/c_1384> a iop:ContextObject ;
     rdfs:label "sea" .
-		
-<http://purl.obolibrary.org/obo/PATO_0045091> a iop:Entity ;
-    rdfs:label "north" .
 
-<http://vocabs.lter-europe.net/EnvThes/30264> a iop:Entity ;
- rdfs:label "surface water" .
+
 	
 
