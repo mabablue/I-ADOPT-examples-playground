@@ -8,7 +8,7 @@ ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "Variance of radial velocity of water current relative to instrument and True North in the water body by high frequency radar" ;
+        "Radial velocity of water current relative to instrument and True North in the water body by high frequency radar" ;
     rdfs:comment 
         """RDVA (m s-1) radial data file""" ;
     iop:hasObjectOfInterest 
