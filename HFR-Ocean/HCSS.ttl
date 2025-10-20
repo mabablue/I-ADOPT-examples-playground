@@ -37,6 +37,10 @@ ex:someVar
         [ a iop:Constraint ;
              rdfs:label "relativve to True North" ;
              iop:constrains ex:Matrix ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "relative to True North" ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
