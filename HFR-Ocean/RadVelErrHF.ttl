@@ -23,10 +23,6 @@ ex:RadVelErrHF
         <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "relative to instrument" ;
-             iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
-        ] ,
-        [ a iop:Constraint ;
              rdfs:label "radial" ;
              iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
         ] ,
@@ -51,7 +47,7 @@ ex:RadVelErrHF
     a 
         iop:StatisticalModifier ;
     rdfs:label 
-        "standard error" .
+        "standard error of the mean" .
 
 <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/>
     a 
