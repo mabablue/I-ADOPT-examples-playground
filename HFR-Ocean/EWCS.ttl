@@ -25,6 +25,10 @@ ex:someVar
         [ a iop:Constraint ;
              rdfs:label "eastward" ;
              iop:constrains ex:Prop ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "surface layer" ;
+             iop:constrains ex:Matrix ;
         ] .
 
 ex:OoI
