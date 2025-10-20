@@ -1,0 +1,58 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+ex:someVar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Significant waveheight by high frequency radar" ;
+    rdfs:comment 
+        """HS (M) wate data file""" ;
+    iop:hasObjectOfInterest 
+        <ex:OoI> ;
+    iop:hasMatrix 
+        ex:Matrix ;
+    iop:hasContextObject 
+        <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
+    iop:hasProperty 
+        ex:Prop ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "significant" ;
+             iop:constrains ex:Prop ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "surface layer" ;
+             iop:constrains ex:Matrix ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "relative to True North" ;
+             iop:constrains <ex:OoI> ;
+        ] .
+
+<ex:OoI>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "wave" .
+
+ex:Matrix
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .
+
+ex:Prop
+    a 
+        iop:Property ;
+    rdfs:label 
+        "height" .
+
+<http://opendata.inrae.fr/thesaurusINRAE/c_1384>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea" .
