@@ -1,38 +1,42 @@
-@prefix ex: <http://example.org/iadopt/HFR> .
 @prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/HFR> .
 
-ex:RadVelDirHF a iop:Variable ;
-    rdfs:label "Direction of radial vector relative to instrument and True North in the water body" ;
-    rdfs:comment "The compass direction in degrees positive clockwise from True North of the radial component of water velocity in a water body." ;
-    ex:issue "https://github.com/i-adopt/OMSmodelling/issues/1" ;
-    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/22225> ;
-    iop:hasObjectOfInterest ex:System ;
-        iop:hasProperty <http://qudt.org/vocab/quantitykind/Angle> ;
-	iop:hasContextObject <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
-    iop:hasConstraint [ a iop:Constraint ;
-                  rdfs:label "relative to instrument" ;
-                  iop:constrains ex:System ] . 
-	
-<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> a iop:Entity ;
-    rdfs:label "water current" .
-	
-<http://purl.obolibrary.org/obo/ERO_0000004> a iop:Entity ;
-    rdfs:label "instrument" .
-	
-<http://qudt.org/vocab/quantitykind/Angle> a iop:Property ;
-    rdfs:label "angle" .
-	
-<http://opendata.inrae.fr/thesaurusINRAE/c_1384> a iop:ContextObject ;
-    rdfs:label "sea" .
-		
-<http://purl.obolibrary.org/obo/PATO_0045091> a iop:Entity ;
-    rdfs:label "north" .
+ex:RadVelDirHF
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Direction of radial velocity of water current relative to instrument and True North in the water body by high frequency radar" ;
+    rdfs:comment 
+        """The compass direction in degrees positive clockwise from True North of the radial component of water velocity in a water body.""" ;
+    iop:hasObjectOfInterest 
+        <http://example.org/iadopt/RDVA_variable> ;
+    iop:hasProperty 
+        <http://example.org/iadopt/direction> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "radial" ;
+             iop:constrains <http://example.org/iadopt/direction> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "away from instrument" ;
+             iop:constrains <http://example.org/iadopt/direction> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "relative to True North" ;
+             iop:constrains  <http://example.org/iadopt/direction> ;
+        ] .
 
-<http://vocabs.lter-europe.net/EnvThes/22225> a iop:Entity ;
-   rdfs:label "sea surface" .
+<http://example.org/iadopt/RDVA_variable>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "radial velocity (away from ) of water current " .
 
-ex:System   a iop:System, iop:AsymmetricSystem ;
-		  rdfs:label "radial vector of water current" ;
-		  iop:hasSource <http://purl.obolibrary.org/obo/PATO_0045091> ;
-		  iop:hasTarget <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> .
+<http://qudt.org/vocab/quantitykind/Angle>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "direction" .
