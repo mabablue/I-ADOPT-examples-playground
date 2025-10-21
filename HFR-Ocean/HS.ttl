@@ -8,7 +8,7 @@ ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "Significant waveheight by high frequency radar" ;
+        "HS Significant waveheight by high frequency radar" ;
     rdfs:comment 
         """HS (M) wate data file""" ;
     iop:hasObjectOfInterest 
