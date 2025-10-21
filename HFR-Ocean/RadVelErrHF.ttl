@@ -8,17 +8,15 @@ ex:RadVelErrHF
     a 
         iop:Variable ;
     rdfs:label 
-        "Radial velocity (away from) standard error of water current relative to instrument in the water body" ;
+        "RDVA Radial velocity (away from) standard error of water current relative to instrument in the water body" ;
     rdfs:comment 
-        """The standard error of the mean (defined as the standard deviation divided by the square root of the sample size) of multiple determinations of the specified phenomenon.""" ;
+        """RDVA (m s-1) """ ;
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
         <http://vocabs.lter-europe.net/EnvThes/22225> ;
     iop:hasContextObject 
         <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
-    iop:hasStatisticalModifier 
-        <http://purl.obolibrary.org/obo/OBI_0000235> ;
     iop:hasProperty 
         <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
     iop:hasConstraint 
@@ -29,6 +27,10 @@ ex:RadVelErrHF
         [ a iop:Constraint ;
              rdfs:label "surface layer" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "away from the instrument" ;
+             iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
@@ -42,12 +44,6 @@ ex:RadVelErrHF
         iop:Entity ;
     rdfs:label 
         "water" .
-
-<http://purl.obolibrary.org/obo/OBI_0000235>
-    a 
-        iop:StatisticalModifier ;
-    rdfs:label 
-        "standard error of the mean" .
 
 <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/>
     a 
