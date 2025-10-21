@@ -8,7 +8,7 @@ ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "Eastward velocity standard deviation water current" ;
+        "EWCS Eastward velocity standard deviation over the coverage period of water current in the water body by high frequency radar" ;
     rdfs:comment 
         """EWCS (m s-1) total data file""" ;
     iop:hasObjectOfInterest 
