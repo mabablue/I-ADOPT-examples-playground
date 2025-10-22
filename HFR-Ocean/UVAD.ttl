@@ -13,10 +13,12 @@ ex:someVar
         """UVAD (m s-1) - ADCP datafile""" ;
     iop:hasObjectOfInterest 
         <ex:OoI> ;
+    iop:hasMatrix 
+        _:b0 ;
     iop:hasContextObject 
         <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
     iop:hasStatisticalModifier 
-        _:b0 ;
+        _:b1 ;
     iop:hasProperty 
         ex:Prop ;
     iop:hasConstraint 
@@ -36,6 +38,12 @@ ex:someVar
         "water current" .
 
 _:b0
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .
+
+_:b1
     a 
         iop:StatisticalModifier ;
     rdfs:label 
