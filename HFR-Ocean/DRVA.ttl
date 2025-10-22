@@ -18,16 +18,16 @@ ex:RadVelDirHF
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "relative to True North" ;
-             iop:constrains  <http://example.org/iadopt/direction> ;
+             iop:constrains <http://example.org/iadopt/direction> ;
         ] .
 
 <http://example.org/iadopt/RDVA_variable>
     a 
         iop:Entity ;
     rdfs:label 
-        "radial velocity (away from ) of water current " .
+        "RDVA radial velocity (away from) of water current related to instrument" .
 
-<http://qudt.org/vocab/quantitykind/Angle>
+<http://example.org/iadopt/direction>
     a 
         iop:Property ;
     rdfs:label 
