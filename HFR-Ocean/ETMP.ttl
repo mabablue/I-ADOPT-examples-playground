@@ -23,12 +23,16 @@
         <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "away from the instrument" ;
+             rdfs:label "relative to instrument" ;
              iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "surface layer" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "over the temporal coverage period" ;
+             iop:constrains _:b0 ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
