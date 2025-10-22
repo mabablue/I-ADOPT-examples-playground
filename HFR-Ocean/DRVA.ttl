@@ -8,7 +8,7 @@ ex:RadVelDirHF
     a 
         iop:Variable ;
     rdfs:label 
-        "DRVA Direction of radial velocity of water current away from instrument and relative to True North by high frequency radar" ;
+        "DRVA Direction of radial velocity of water current relative to instrument and to True North by high frequency radar" ;
     rdfs:comment 
         """The compass direction in degrees positive clockwise from True North of the radial component of water velocity in a water body.""" ;
     iop:hasObjectOfInterest 
@@ -16,14 +16,6 @@ ex:RadVelDirHF
     iop:hasProperty 
         <http://example.org/iadopt/direction> ;
     iop:hasConstraint 
-        [ a iop:Constraint ;
-             rdfs:label "radial" ;
-             iop:constrains <http://example.org/iadopt/direction> ;
-        ] ,
-        [ a iop:Constraint ;
-             rdfs:label "away from instrument" ;
-             iop:constrains <http://example.org/iadopt/direction> ;
-        ] ,
         [ a iop:Constraint ;
              rdfs:label "relative to True North" ;
              iop:constrains  <http://example.org/iadopt/direction> ;
