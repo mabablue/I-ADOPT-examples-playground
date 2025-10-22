@@ -8,7 +8,7 @@ ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "HCSS Radial velocity variance of water current relative to instrument and True North in the water body by high frequency radar" ;
+        "HCSS Radial velocity variance of water current relative to instrument  in the water body by high frequency radar" ;
     rdfs:comment 
         """HCSS (m2 s-2) radial data file""" ;
     iop:hasObjectOfInterest 
@@ -23,7 +23,7 @@ ex:someVar
         ex:Prop ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "radial" ;
+             rdfs:label "radial relative to instrument" ;
              iop:constrains ex:Prop ;
         ] ,
         [ a iop:Constraint ;
@@ -31,16 +31,8 @@ ex:someVar
              iop:constrains ex:Matrix ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "relative to instrument" ;
-             iop:constrains ex:Prop ;
-        ] ,
-        [ a iop:Constraint ;
-             rdfs:label "relativve to True North" ;
-             iop:constrains ex:Matrix ;
-        ] ,
-        [ a iop:Constraint ;
-             rdfs:label "relative to True North" ;
-             iop:constrains <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
+             rdfs:label "over temporal coverage period" ;
+             iop:constrains <http://purl.obolibrary.org/obo/STATO_0000113> ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
