@@ -14,11 +14,11 @@ ex:RadVelDirHF
     iop:hasObjectOfInterest 
         <http://example.org/iadopt/RDVA_variable> ;
     iop:hasProperty 
-        <http://example.org/iadopt/direction> ;
+        <http://qudt.org/vocab/quantitykind/PlaneAngle> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "relative to True North" ;
-             iop:constrains <http://example.org/iadopt/direction> ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/PlaneAngle> ;
         ] .
 
 <http://example.org/iadopt/RDVA_variable>
@@ -27,8 +27,8 @@ ex:RadVelDirHF
     rdfs:label 
         "RDVA radial velocity (away from) of water current related to instrument" .
 
-<http://example.org/iadopt/direction>
+<http://qudt.org/vocab/quantitykind/PlaneAngle>
     a 
         iop:Property ;
     rdfs:label 
-        "direction" .
+        "plane angle" .
