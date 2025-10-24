@@ -8,7 +8,7 @@ ex:RadVelErrHF
     a 
         iop:Variable ;
     rdfs:label 
-        "RDVA Radial velocity (away from) of water current relative to instrument in the water body" ;
+        "RDVA Radial velocity (away from) of water current relative to instrument in the water body by High Frequency Radar" ;
     rdfs:comment 
         """RDVA (m s-1) """ ;
     iop:hasObjectOfInterest 
@@ -25,9 +25,13 @@ ex:RadVelErrHF
              iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "surface layer" ;
+             rdfs:label "at the surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
-        ]  .
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "positive away from the instrument" ;
+             iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
+        ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
     a 
