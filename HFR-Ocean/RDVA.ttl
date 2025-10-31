@@ -10,7 +10,7 @@ ex:RadVelErrHF
     rdfs:label 
         "RDVA Radial velocity (away from) of water current relative to instrument in the water body by High Frequency Radar" ;
     rdfs:comment 
-        """RDVA (m s-1) """ ;
+        """Component of the sea surface current velocity that is directed toward (negative values) or away from (positive values) the High Frequency Radar (HFR) antenna, measured along the lines of sight of the antenna, i.e. along radial lines centered at the HFR antenna. In HFR systems, it is inferred from the Doppler shift of radio waves backscattered by surface gravity waves of half their electromagnetic wavelength. HFR systems transmit electromagnetic signals in the high-frequency range 3-30 MHz, with corresponding wavelengths in the range 100-10 m.""" ;
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
