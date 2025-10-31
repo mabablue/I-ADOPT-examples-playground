@@ -43,7 +43,7 @@ ex:RadVelErrHF
     a 
         iop:Entity ;
     rdfs:label 
-        "water" .
+        "water body" .
 
 <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/>
     a 
