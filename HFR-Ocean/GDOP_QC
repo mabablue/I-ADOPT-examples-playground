@@ -1,0 +1,34 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/HFR> .
+
+_:b0
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "GDOP threshold quality flag" ;
+    rdfs:comment 
+        """Quality flag for GDOP based on a threshold""" ;
+    iop:hasObjectOfInterest 
+        _:b1 ;
+    iop:hasProperty 
+        _:b2 ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "threshold value" ;
+             iop:constrains _:b2 ;
+        ] .
+
+_:b1
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "GDOP" .
+
+_:b2
+    a 
+        iop:Property ;
+    rdfs:label 
+        "quality flag" .
