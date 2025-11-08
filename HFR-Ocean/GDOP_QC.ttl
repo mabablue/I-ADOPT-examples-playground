@@ -2,32 +2,32 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ex: <http://example.org/iadopt/HFR> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
 
-_:b0
+ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "GDOP threshold quality flag" ;
+        "Quality flag of GDOP" ;
     rdfs:comment 
-        """Quality flag for GDOP based on a threshold""" ;
+        """Quality flag of GDOP based on a threshold value""" ;
     iop:hasObjectOfInterest 
-        _:b1 ;
+        _:b0 ;
     iop:hasProperty 
-        _:b2 ;
+        ex:Prop ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "threshold value" ;
-             iop:constrains _:b2 ;
+             iop:constrains ex:Prop ;
         ] .
 
-_:b1
+_:b0
     a 
         iop:Entity ;
     rdfs:label 
         "GDOP" .
 
-_:b2
+ex:Prop
     a 
         iop:Property ;
     rdfs:label 
