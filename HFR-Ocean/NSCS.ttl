@@ -31,7 +31,7 @@ ex:NSCS
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "over the coverage of a period" ;
+             rdfs:label "over temporal coverage period" ;
              iop:constrains <http://www.ontology-of-units-of-measure.org/resource/om-2/standardDeviation> ;
         ] .
 
