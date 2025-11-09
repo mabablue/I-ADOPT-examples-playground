@@ -1,33 +1,33 @@
-efix iop: <https://w3id.org/iadopt/ont/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix ex: <http://example.org/iadopt/HFR> .
 
-ex:someVar
+ex:RadVelErrHF
     a 
         iop:Variable ;
     rdfs:label 
-        "Quality flag of GDOP" ;
+        "GDOP Geometric dilution of precision " ;
     rdfs:comment 
-        """Quality flag of GDOP based on a threshold value""" ;
+        """Dilution of precision of the relative position between the grid cell and the contributing radial antennas.""" ;
     iop:hasObjectOfInterest 
-        ex:OoI ;
+        _:b0 ;
     iop:hasProperty 
-        ex:Prop ;
+        _:b1 ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "threshold value" ;
-             iop:constrains ex:Prop ;
+             iop:constrains _:b1 ;
         ] .
 
-ex:OoI
+_:b0
     a 
         iop:Entity ;
     rdfs:label 
         "GDOP" .
 
-ex:Prop
+_:b1
     a 
         iop:Property ;
     rdfs:label 
