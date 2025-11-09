@@ -14,25 +14,25 @@ ex:someVar
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
-        ex:Matrix ;
+        <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
     iop:hasContextObject 
         <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
     iop:hasStatisticalModifier 
-        <http://purl.obolibrary.org/obo/STATO_0000113> ;
+        <http://purl.obolibrary.org/obo/OBI_0000071> ;
     iop:hasProperty 
-        ex:Prop ;
+        <http://qudt.org/vocab/quantitykind/Velocity> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "relative to instrument" ;
-             iop:constrains ex:Prop ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "at the surface" ;
-             iop:constrains ex:Matrix ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "radial" ;
-             iop:constrains ex:Prop ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
@@ -41,19 +41,21 @@ ex:someVar
     rdfs:label 
         "water current" .
 
-ex:Matrix
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S027/>
     a 
         iop:Entity ;
     rdfs:label 
         "water body" .
 
-<http://purl.obolibrary.org/obo/STATO_0000113>
+<http://purl.obolibrary.org/obo/OBI_0000071>
     a 
         iop:StatisticalModifier ;
     rdfs:label 
-        "uncertainty" .
+        "quantitative confidence value" ;
+    rdfs:comment 
+        """A data item which is used to indicate the degree of uncertainty about a measurement.""" .
 
-ex:Prop
+<http://qudt.org/vocab/quantitykind/Velocity>
     a 
         iop:Property ;
     rdfs:label 
