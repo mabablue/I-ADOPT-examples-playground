@@ -8,9 +8,9 @@ ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "EWCS Eastward velocity standard deviation over the coverage period of water current in the water body by high frequency radar" ;
+        "EWCS Eastward velocity standard deviation of water current in the water body by high frequency radar" ;
     rdfs:comment 
-        """EWCS (m s-1) total data file""" ;
+        """Standard deviation of multiple measurements taken in a specified time interval (temporal integration time) of the West-to-East component of the velocity of the sea water current on the sea surface  (m s-1)""" ;
     iop:hasObjectOfInterest 
         ex:OoI ;
     iop:hasMatrix 
@@ -29,6 +29,10 @@ ex:someVar
         [ a iop:Constraint ;
              rdfs:label "surface layer" ;
              iop:constrains ex:Matrix ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "over the coverage of a period" ;
+             iop:constrains ex:StatMod ;
         ] .
 
 ex:OoI
@@ -41,7 +45,7 @@ ex:Matrix
     a 
         iop:Entity ;
     rdfs:label 
-        "water" .
+        "water body" .
 
 ex:StatMod
     a 
