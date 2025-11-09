@@ -23,7 +23,7 @@ ex:someVar
         ex:Prop ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "radial relative to instrument" ;
+             rdfs:label "relative to instrument" ;
              iop:constrains ex:Prop ;
         ] ,
         [ a iop:Constraint ;
@@ -33,6 +33,10 @@ ex:someVar
         [ a iop:Constraint ;
              rdfs:label "over temporal coverage period" ;
              iop:constrains <http://purl.obolibrary.org/obo/STATO_0000113> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "radial" ;
+             iop:constrains ex:Prop ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
