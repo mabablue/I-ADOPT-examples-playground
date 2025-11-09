@@ -1,0 +1,66 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+ex:someVar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "EWCS Eastward velocity standard deviation of water current in the water body by high frequency radar" ;
+    rdfs:comment 
+        """Standard deviation of multiple measurements taken in a specified time interval (temporal integration time) of the West-to-East component of the velocity of the sea water current on the sea surface  (m s-1)""" ;
+    iop:hasObjectOfInterest 
+        ex:OoI ;
+    iop:hasMatrix 
+        ex:Matrix ;
+    iop:hasContextObject 
+        ex:CO ;
+    iop:hasStatisticalModifier 
+        ex:StatMod ;
+    iop:hasProperty 
+        ex:Prop ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "eastward" ;
+             iop:constrains ex:Prop ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "surface layer" ;
+             iop:constrains ex:Matrix ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "over temporal coverage period" ;
+             iop:constrains ex:StatMod ;
+        ] .
+
+ex:OoI
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "Water current" .
+
+ex:Matrix
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water body" .
+
+ex:StatMod
+    a 
+        iop:StatisticalModifier ;
+    rdfs:label 
+        "standard deviation" .
+
+ex:Prop
+    a 
+        iop:Property ;
+    rdfs:label 
+        "Velocity" .
+
+ex:CO
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea" .
