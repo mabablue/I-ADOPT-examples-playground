@@ -12,54 +12,54 @@ ex:someVar
     rdfs:comment 
         """Standard deviation of multiple measurements taken in a specified time interval (temporal integration time) of the West-to-East component of the velocity of the sea water current on the sea surface  (m s-1)""" ;
     iop:hasObjectOfInterest 
-        ex:OoI ;
+        <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
-        ex:Matrix ;
+        <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
     iop:hasContextObject 
-        ex:CO ;
+        <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
     iop:hasStatisticalModifier 
-        ex:StatMod ;
+        <http://purl.obolibrary.org/obo/STATO_0000237> ;
     iop:hasProperty 
-        ex:Prop ;
+        <http://qudt.org/vocab/quantitykind/Velocity> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "eastward" ;
-             iop:constrains ex:Prop ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "surface layer" ;
-             iop:constrains ex:Matrix ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "over temporal coverage period" ;
-             iop:constrains ex:StatMod ;
+             iop:constrains <http://purl.obolibrary.org/obo/STATO_0000237> ;
         ] .
 
-ex:OoI
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
     a 
         iop:Entity ;
     rdfs:label 
-        "Water current" .
+        "water current" .
 
-ex:Matrix
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S027/>
     a 
         iop:Entity ;
     rdfs:label 
         "water body" .
 
-ex:StatMod
+<http://purl.obolibrary.org/obo/STATO_0000237>
     a 
         iop:StatisticalModifier ;
     rdfs:label 
         "standard deviation" .
 
-ex:Prop
+<http://qudt.org/vocab/quantitykind/Velocity>
     a 
         iop:Property ;
     rdfs:label 
         "Velocity" .
 
-ex:CO
+<http://opendata.inrae.fr/thesaurusINRAE/c_1384>
     a 
         iop:Entity ;
     rdfs:label 
