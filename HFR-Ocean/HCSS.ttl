@@ -27,7 +27,7 @@ ex:someVar
              iop:constrains ex:Prop ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "surface layer" ;
+             rdfs:label "at the surface" ;
              iop:constrains ex:Matrix ;
         ] ,
         [ a iop:Constraint ;
