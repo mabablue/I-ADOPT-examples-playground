@@ -45,7 +45,7 @@ ex:Matrix
     a 
         iop:Entity ;
     rdfs:label 
-        "water" .
+        "water body" .
 
 <http://purl.obolibrary.org/obo/STATO_0000113>
     a 
