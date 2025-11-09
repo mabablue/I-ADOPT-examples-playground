@@ -31,7 +31,7 @@ ex:someVar
              iop:constrains <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "over temporal coverage period" ;
+             rdfs:label "over the temporal coverage period" ;
              iop:constrains <http://purl.obolibrary.org/obo/STATO_0000237> ;
         ] .
 
