@@ -23,7 +23,7 @@
         <http://qudt.org/vocab/quantitykind/Velocity> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "radial relative to instrument" ;
+             rdfs:label "relative to instrument" ;
              iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] ,
         [ a iop:Constraint ;
@@ -36,6 +36,10 @@
         ] ,
         [ a iop:Constraint ;
              rdfs:label "positive away from the instrument" ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "radial" ;
              iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] .
 
