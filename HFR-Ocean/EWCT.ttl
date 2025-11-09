@@ -41,7 +41,7 @@ EWCT (m s-1)""" ;
     a 
         iop:Entity ;
     rdfs:label 
-        "water" .
+        "water body" .
 
 <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/>
     a 
