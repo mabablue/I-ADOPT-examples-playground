@@ -8,7 +8,7 @@
     a 
         iop:Variable ;
     rdfs:label 
-        "ETMP Radial velocity (away from) standard deviation over the coverage period of water current relative to instrument and True North in the water body by high frequency radar" ;
+        "ETMP Radial velocity (away from) standard deviation of water current relative to instrument in the water body by high frequency radar" ;
     rdfs:comment 
         """ETMP (m s-1)""" ;
     iop:hasObjectOfInterest 
@@ -23,16 +23,20 @@
         <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "relative to instrument" ;
+             rdfs:label "radial relative to instrument" ;
              iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "surface layer" ;
+             rdfs:label "at the sea surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "over the temporal coverage period" ;
              iop:constrains _:b0 ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "positive away from the instrument" ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
@@ -45,7 +49,7 @@
     a 
         iop:Entity ;
     rdfs:label 
-        "water" .
+        "water body" .
 
 _:b0
     a 
