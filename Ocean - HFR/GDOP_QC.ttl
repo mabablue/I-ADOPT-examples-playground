@@ -18,7 +18,7 @@ ex:Variable
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "threshold value" ;
-             iop:constrains _:b2 ;
+             iop:constrains ex:Prop ;
         ] .
 
 ex:OoI
