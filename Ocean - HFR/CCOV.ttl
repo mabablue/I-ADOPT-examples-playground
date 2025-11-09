@@ -2,13 +2,15 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ex: <http://example.org/iadopt/HFR> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
 
-_:b0
+ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "CCOV Covariance of surface water velocity " ;
+        "EWCS Eastward velocity standard deviation of water current in the water body by high frequency radar" ;
+    rdfs:comment 
+        """Standard deviation of multiple measurements taken in a specified time interval (temporal integration time) of the West-to-East component of the velocity of the sea water current on the sea surface  (m s-1)""" ;
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
@@ -47,7 +49,7 @@ _:b0
     a 
         iop:Property ;
     rdfs:label 
-        "velocity" .
+        "Velocity" .
 
 <http://opendata.inrae.fr/thesaurusINRAE/c_1384>
     a 
