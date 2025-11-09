@@ -27,7 +27,7 @@ EWCT (m s-1)""" ;
              iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "surface layer" ;
+             rdfs:label "at the surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
         ] .
 
