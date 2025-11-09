@@ -27,7 +27,7 @@ ex:someVar
              iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "surface layer" ;
+             rdfs:label "at the surface" ;
              iop:constrains <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
         ] ,
         [ a iop:Constraint ;
