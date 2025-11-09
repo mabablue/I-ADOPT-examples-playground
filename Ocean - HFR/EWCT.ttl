@@ -16,19 +16,19 @@ EWCT (m s-1)""" ;
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
-        <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
     iop:hasContextObject 
         <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
     iop:hasProperty 
-        <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
+        <http://qudt.org/vocab/quantitykind/Velocity> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "eastward" ;
-             iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600153/> ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "at the surface" ;
-             iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
@@ -37,13 +37,13 @@ EWCT (m s-1)""" ;
     rdfs:label 
         "water current" .
 
-<http://vocabs.lter-europe.net/EnvThes/22225>
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S027/>
     a 
         iop:Entity ;
     rdfs:label 
         "water body" .
 
-<http://vocab.nerc.ac.uk/collection/S06/current/S0600153/>
+<http://qudt.org/vocab/quantitykind/Velocity>
     a 
         iop:Property ;
     rdfs:label 
@@ -54,6 +54,3 @@ EWCT (m s-1)""" ;
         iop:Entity ;
     rdfs:label 
         "sea" .
-
-
-
