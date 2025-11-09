@@ -27,7 +27,7 @@ ex:NSCS
              iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600154/> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "surface layer" ;
+             rdfs:label "at the surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
         ] .
 
@@ -41,7 +41,7 @@ ex:NSCS
     a 
         iop:Entity ;
     rdfs:label 
-        "water" .
+        "water body" .
 
 <http://www.ontology-of-units-of-measure.org/resource/om-2/standardDeviation>
     a 
