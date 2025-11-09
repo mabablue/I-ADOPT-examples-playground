@@ -4,7 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ex: <http://example.org/iadopt/HFR> .
 
-_:b0
+ex:Variable
     a 
         iop:Variable ;
     rdfs:label 
@@ -12,22 +12,22 @@ _:b0
     rdfs:comment 
         """Dilution of precision of the relative position between the grid cell and the contributing radial antennas.""" ;
     iop:hasObjectOfInterest 
-        _:b1 ;
+        ex:OoI ;
     iop:hasProperty 
-        _:b2 ;
+        ex:Prop ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "threshold value" ;
              iop:constrains _:b2 ;
         ] .
 
-_:b1
+ex:OoI
     a 
         iop:Entity ;
     rdfs:label 
         "GDOP" .
 
-_:b2
+ex:Prop
     a 
         iop:Property ;
     rdfs:label 
