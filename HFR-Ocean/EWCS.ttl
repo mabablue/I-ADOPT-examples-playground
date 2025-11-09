@@ -31,7 +31,7 @@ ex:someVar
              iop:constrains ex:Matrix ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "over the coverage of a period" ;
+             rdfs:label "over temporal coverage period" ;
              iop:constrains ex:StatMod ;
         ] .
 
