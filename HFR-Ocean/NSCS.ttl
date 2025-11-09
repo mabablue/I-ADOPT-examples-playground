@@ -29,6 +29,10 @@ ex:NSCS
         [ a iop:Constraint ;
              rdfs:label "at the surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "over the coverage of a period" ;
+             iop:constrains <http://www.ontology-of-units-of-measure.org/resource/om-2/standardDeviation> ;
         ] .
 
 <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
