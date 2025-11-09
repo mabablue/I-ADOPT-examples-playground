@@ -8,48 +8,48 @@ ex:someVar
     a 
         iop:Variable ;
     rdfs:label 
-        "Eastward velocity average in the water by a moored acoustic doppler current profile (ADCP)" ;
+        "UVAD Eastward velocity average in the water by a moored acoustic doppler current profile (ADCP)" ;
     rdfs:comment 
         """UVAD (m s-1) - ADCP datafile""" ;
     iop:hasObjectOfInterest 
-        <ex:OoI> ;
+        <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
-        _:b0 ;
+        <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
     iop:hasContextObject 
         <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
     iop:hasStatisticalModifier 
-        _:b1 ;
+        <http://purl.obolibrary.org/obo/STATO_0000573> ;
     iop:hasProperty 
-        ex:Prop ;
+        <http://qudt.org/vocab/quantitykind/Velocity> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "eastward" ;
-             iop:constrains ex:Prop ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "eulerian" ;
-             iop:constrains ex:Prop ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
         ] .
 
-<ex:OoI>
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
     a 
         iop:Entity ;
     rdfs:label 
         "water current" .
 
-_:b0
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S027/>
     a 
         iop:Entity ;
     rdfs:label 
-        "water" .
+        "water body" .
 
-_:b1
+<http://purl.obolibrary.org/obo/STATO_0000573>
     a 
         iop:StatisticalModifier ;
     rdfs:label 
-        "average" .
+        "average value" .
 
-ex:Prop
+<http://qudt.org/vocab/quantitykind/Velocity>
     a 
         iop:Property ;
     rdfs:label 
