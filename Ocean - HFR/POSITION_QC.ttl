@@ -20,7 +20,7 @@ ex:OoI
     a 
         iop:Entity ;
     rdfs:label 
-        "Positions information of the dataset" .
+        "positions information of the dataset" .
 
 ex:Prop
     a 
