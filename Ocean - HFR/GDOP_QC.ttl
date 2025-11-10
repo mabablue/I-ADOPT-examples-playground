@@ -17,7 +17,7 @@ ex:Variable
         ex:Prop ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "threshold value" ;
+             rdfs:label "over threshold value" ;
              iop:constrains ex:Prop ;
         ] .
 
