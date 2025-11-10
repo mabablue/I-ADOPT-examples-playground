@@ -10,7 +10,7 @@ ex:RadVelDirHF
     rdfs:label 
         "DRVA Direction of radial velocity of water current relative to instrument and to True North by high frequency radar" ;
     rdfs:comment 
-        """The compass direction in degrees positive clockwise from True North of the radial component of water velocity in a water body.""" ;
+        """The compass direction in degrees positive clockwise from TrueNorth of the component of water velocity in a water body along radial lines centered at the HFR antenna.""" ;
     iop:hasObjectOfInterest 
         <http://example.org/iadopt/RDVA_variable> ;
     iop:hasProperty 
