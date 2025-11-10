@@ -10,7 +10,7 @@
     rdfs:label 
         "ETMP Radial velocity (away from) standard deviation of water current relative to instrument in the water body by high frequency radar" ;
     rdfs:comment 
-        """ETMP (m s-1)""" ;
+        """Standard deviation of the component of water velocity in a water body along radial lines centered at the HFR antenna, evaluated over the coverage period""" ;
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
