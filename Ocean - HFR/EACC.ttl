@@ -10,7 +10,7 @@ ex:someVar
     rdfs:label 
         "UACC Eastward velocity uncertainty of water current in the water body by high frequency radar" ;
     rdfs:comment
-        """Uncertainty of the component of water velocity in a water body along radial lines centered at the HFR antenna."""
+        """Uncertainty of the component of water velocity in a water body along radial lines centered at the HFR antenna.""" ;
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
