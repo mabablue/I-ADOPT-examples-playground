@@ -10,7 +10,7 @@ ex:someVar
     rdfs:label 
         "VACC Northward velocity uncertainty of water current in the water body by high frequency radar" ;
     rdfs:comment 
-        """VACC (m s-1)""" ;
+        """Uncertainty of the northward component of water velocity in a water body.""" ;
     iop:hasObjectOfInterest 
         <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
     iop:hasMatrix 
