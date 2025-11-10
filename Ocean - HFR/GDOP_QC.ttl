@@ -10,7 +10,7 @@ ex:Variable
     rdfs:label 
         "GDOP threshold quality flag " ;
     rdfs:comment 
-        """Quality flag for GDOP based on a threshold""" ;
+        """QC flags resulting from setting a threshold on GDOP. Setting a threshold on GDOP for total combination avoids the combination of radials with an intersection angle below a certain value.""" ;
     iop:hasObjectOfInterest 
         ex:OoI ;
     iop:hasProperty 
