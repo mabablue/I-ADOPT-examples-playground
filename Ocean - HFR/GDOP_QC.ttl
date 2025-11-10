@@ -8,9 +8,9 @@ ex:Variable
     a 
         iop:Variable ;
     rdfs:label 
-        "GDOP Geometric dilution of precision " ;
+        "GDOP threshold quality flag " ;
     rdfs:comment 
-        """Dilution of precision of the relative position between the grid cell and the contributing radial antennas.""" ;
+        """Quality flag for GDOP based on a threshold""" ;
     iop:hasObjectOfInterest 
         ex:OoI ;
     iop:hasProperty 
