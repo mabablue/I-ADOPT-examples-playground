@@ -36,11 +36,10 @@ _:b0
     a 
         iop:Entity ;
     rdfs:label 
-        "position of grid cell" .
+        "position of receiver" .
 
 _:b1
     a 
         iop:Entity ;
     rdfs:label 
-        "position of radial antenna" .
-
+        "position of transmitters" .
