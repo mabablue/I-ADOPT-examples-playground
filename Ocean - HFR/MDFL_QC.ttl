@@ -17,7 +17,7 @@
         <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "threshold value" ;
+             rdfs:label "under threshold value" ;
              iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600265/> ;
         ] .
 
