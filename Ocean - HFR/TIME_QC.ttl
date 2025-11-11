@@ -14,7 +14,12 @@ ex:Variable
     iop:hasObjectOfInterest 
         ex:OoI ;
     iop:hasProperty 
-        ex:Prop .
+        ex:Prop ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "good if time is correct" ;
+             iop:constrains ex:Prop ;
+        ] .
 
 ex:OoI
     a 
