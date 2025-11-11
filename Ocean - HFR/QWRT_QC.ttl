@@ -17,7 +17,7 @@ ex:Variable
         ex:Prop ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "over-water" ;
+             rdfs:label "good if measurement is on water" ;
              iop:constrains ex:Prop ;
         ] .
 
