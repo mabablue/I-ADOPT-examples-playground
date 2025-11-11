@@ -32,4 +32,3 @@ ex:Prop
         iop:Property ;
     rdfs:label 
         "quality flag" .
-
