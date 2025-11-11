@@ -10,7 +10,7 @@ ex:Variable
     rdfs:label 
         "QWTR_QC Over-water quality flag" ;
     rdfs:comment 
-        """QC flags labelling radial velocity vectors that lie on water with a good data” flag. Otherwise, the vectors are labelled with a “bad data” flag.""" ;
+        """QC flags labelling radial velocity of water current that lie on water with a good data” flag. Otherwise, the vectors are labelled with a “bad data” flag.""" ;
     iop:hasObjectOfInterest 
         ex:OoI ;
     iop:hasProperty 
@@ -25,7 +25,7 @@ ex:OoI
     a 
         iop:Entity ;
     rdfs:label 
-        "RDVA Radial velocity (away from) of water curren" .
+        "RDVA Radial velocity (away from) of water current" .
 
 ex:Prop
     a 
