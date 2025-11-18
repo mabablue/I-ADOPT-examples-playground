@@ -1,0 +1,23 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C20 a iop:Variable ;
+    rdfs:label "Concentration of DDT impacted by industry" ;
+    rdfs:comment "Concentration of DDT in a given year at a site impacted by industry." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/37" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "due to industry" ;
+            iop:constrains <http://qudt.org/vocab/quantitykind/MassFraction> ] ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/24> ;
+    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_16130> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/MassFraction> .
+
+<http://purl.obolibrary.org/obo/CHEBI_16130> a iop:Entity ;
+    rdfs:label "DDT" .
+
+<http://qudt.org/vocab/quantitykind/MassFraction> a iop:Property ;
+    rdfs:label "mass fraction" .
+
+<http://vocabs.lter-europe.net/EnvThes/24> a iop:Entity ;
+    rdfs:label "soil" .

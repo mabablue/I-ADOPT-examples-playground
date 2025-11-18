@@ -1,0 +1,34 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C2 a iop:Variable ;
+    rdfs:label "Air daily maximum temperature" ;
+    rdfs:comment "Temperature of the air in a height of 1.7 meter, daily maximum" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/19" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "daily" ;
+			a <http://vocabs.lter-europe.net/EnvThes/30336> ;
+            iop:constrains <http://www.ontology-of-units-of-measure.org/resource/om-2/maximum> ],
+           [ a iop:Constraint ;
+            rdfs:label "1,7 m aboveground" ;
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/23>] ;
+    iop:hasContextObject <http://vocabs.lter-europe.net/EnvThes/21920> ;
+    iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/23> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+    iop:hasStatisticalModifier <http://www.ontology-of-units-of-measure.org/resource/om-2/maximum> .
+
+
+<http://vocabs.lter-europe.net/EnvThes/21920> a iop:Entity ;
+    rdfs:label "atmosphere" .
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> a iop:Property ;
+    rdfs:label "thermodynamic temperature" .
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/maximum> a iop:StatisticalModifier ;
+    rdfs:label "maximum" .
+
+<http://vocabs.lter-europe.net/EnvThes/23> a iop:Entity ;
+    rdfs:label "air" .
+
+<http://vocabs.lter-europe.net/EnvThes/30336> rdfs:label "daily" .

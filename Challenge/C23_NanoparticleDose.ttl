@@ -1,0 +1,23 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C23 a iop:Variable ;
+    rdfs:label "dose of applied nanomaterial internalised by a specific cell population (or per single cell) -mass per cell area" ;
+    rdfs:comment "Correlation of dose and response for nanomaterials toxicity assessment requires information on the amount of the applied dose of nanomaterial that has been internalised by a cell population (or per specific cell) and is dependent on a number of factors including the exposure time, the particle density (i.e., whether settling occurs and thus the distribution of particles in the medium is non-homogeneous affecting the local concentration at the cell surface) etc." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/40" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "entering the cell" ;
+            iop:constrains <http://purl.bioontology.org/ontology/npo#NPO_199> ] ;
+    iop:hasMatrix <http://purl.obolibrary.org/obo/NCIT_C33974> ;
+    iop:hasObjectOfInterest <http://purl.bioontology.org/ontology/npo#NPO_199> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/MassPerArea> .
+
+<http://purl.obolibrary.org/obo/NCIT_C33974> a iop:Entity ;
+    rdfs:label "cell surface" .
+
+<http://purl.bioontology.org/ontology/npo#NPO_199> a iop:Entity ;
+    rdfs:label "nanomaterial" .
+
+<http://qudt.org/vocab/quantitykind/MassPerArea> a iop:Property ;
+    rdfs:label "mass per area" .

@@ -1,0 +1,27 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C30 a iop:Variable ;
+    rdfs:label "Date of last PCR-test" ;
+    rdfs:comment "date of last COVID-19 PCR test performed by a certified laboratory" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/47" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "performed by a certified laboratory" ;
+            iop:constrains <http://purl.obolibrary.org/obo/CIDO_0020276> ] ;
+    iop:hasMatrix <http://purl.obolibrary.org/obo/NCIT_C16960> ;
+    iop:hasStatisticalModifier <http://www.ontology-of-units-of-measure.org/resource/om-2/last> ;
+    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CIDO_0020276> ;
+    iop:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/Date> .
+
+<http://purl.obolibrary.org/obo/NCIT_C16960> a iop:Entity ;
+    rdfs:label "patient" .
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/last> a iop:StatisticalModifier ;
+    rdfs:label "last" .
+
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Date> a iop:Property ;
+    rdfs:label "date" .
+
+<http://purl.obolibrary.org/obo/CIDO_0020276> a iop:Entity ;
+    rdfs:label "SARS-CoV2 PCR-test" .

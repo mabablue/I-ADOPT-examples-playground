@@ -1,0 +1,54 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/HFR> .
+
+ex:EWCT
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "EWCT Eastward velocity of water current in the water body by high frequency radar" ;
+    rdfs:comment 
+        """Component of the sea surface current velocity that is directed eastward (positive values) or westward (negative values)""" ;
+    iop:hasObjectOfInterest 
+        <http://vocab.nerc.ac.uk/collection/S29/current/PE001307/> ;
+    iop:hasMatrix 
+        <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
+    iop:hasContextObject 
+        <http://opendata.inrae.fr/thesaurusINRAE/c_1384> ;
+    iop:hasProperty 
+        <http://qudt.org/vocab/quantitykind/Velocity> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "eastward" ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/Velocity> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "at the surface" ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
+        ] .
+
+<http://vocab.nerc.ac.uk/collection/S29/current/PE001307/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water current" .
+
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S027/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water body" .
+
+<http://qudt.org/vocab/quantitykind/Velocity>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "velocity" .
+
+<http://opendata.inrae.fr/thesaurusINRAE/c_1384>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea" .

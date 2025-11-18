@@ -1,1 +1,2 @@
-This is a repository for I-ADOPT variables prepared for the LLM service. 
+This repository is used to play around with I-ADOPT variable descriptions.
+

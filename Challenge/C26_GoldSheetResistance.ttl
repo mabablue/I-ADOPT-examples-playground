@@ -1,0 +1,19 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C26 a iop:Variable ;
+    rdfs:label "Sheet resistance of layer of gold" ;
+    rdfs:comment "The sheet resistance of a 5-nanometer-thick layer of gold." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/43" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "5 nm thick layer" ;
+            iop:constrains <http://purl.obolibrary.org/obo/CHEBI:30050> ] ;
+    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI:30050> ;
+    iop:hasProperty <https://www.wikidata.org/wiki/Q354718> .
+
+<http://purl.obolibrary.org/obo/CHEBI:30050> a iop:Entity ;
+    rdfs:label "gold" .
+
+<https://www.wikidata.org/wiki/Q354718> a iop:Property ;
+    rdfs:label "sheet resistance" .
