@@ -1,0 +1,44 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C19 a iop:Variable ;
+    rdfs:label "Weight specific-ingestion Carbon rate at 15 °C" ;
+    rdfs:comment "The amount of carbon consumed by an organism at non-limiting concentration of food relative to the individual dry weight measured at 15°C. It is expressed as μg C mg DW−1 h−1" ;
+    ex:issue "https://github.com/i-adopt/examples/issues/36" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "weight-specific" ;
+            iop:constrains <http://qudt.org/vocab/quantitykind/MassFlowRate>],
+        [ a iop:Constraint ;
+            rdfs:label "dry" ;
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/26> ],
+        [ a iop:Constraint ;
+            rdfs:label "at non-limiting conditions" ;
+            iop:constrains <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27594> ],
+        [ a iop:Constraint ;
+            rdfs:label "at 15°C temperature" ;
+            iop:constrains <http://qudt.org/vocab/quantitykind/MassFlowRate> ],
+        [ a iop:Constraint ;
+            rdfs:label "due to ingestion" ;
+            iop:constrains <http://qudt.org/vocab/quantitykind/MassFlowRate> ] ;
+    iop:hasMatrix [
+      a iop:System, iop:AsymmetricSystem ;
+		  rdfs:label "from food to organism" ;
+		  iop:hasSource <http://vocabs.lter-europe.net/EnvThes/20523> ;
+		  iop:hasTarget <http://vocabs.lter-europe.net/EnvThes/26>
+    ] ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/26> ;
+    iop:hasObjectOfInterest <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27594> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/MassFlowRate> .
+
+<https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27594> a iop:Entity ;
+    rdfs:label "Carbon" .
+
+<http://vocabs.lter-europe.net/EnvThes/26> a iop:Entity ;
+    rdfs:label "organism" .
+
+<http://qudt.org/vocab/quantitykind/MassFlowRate> a iop:Property ;
+    rdfs:label "mass flow rate" .
+	
+<http://vocabs.lter-europe.net/EnvThes/20523> a iop:Entity ;
+    rdfs:label "food" .

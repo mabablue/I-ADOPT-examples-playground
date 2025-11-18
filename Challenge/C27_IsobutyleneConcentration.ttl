@@ -1,0 +1,20 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C27 a iop:Variable ;
+    rdfs:label "Mass concentration of isobutylene in chloroform" ;
+    rdfs:comment "Mass concentration of isobutylene in chloroform." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/44" ;
+    iop:hasMatrix <http://purl.obolibrary.org/obo/CHEBI_35255> ;
+    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_53725> ;
+    iop:hasProperty <http://qudt.org/vocab/quantitykind/MassConcentration> .
+
+<http://purl.obolibrary.org/obo/CHEBI_35255> a iop:Entity ;
+    rdfs:label "chloroform" .
+
+<http://purl.obolibrary.org/obo/CHEBI_53725> a iop:Entity ;
+    rdfs:label "isobutylene" .
+
+<http://qudt.org/vocab/quantitykind/MassConcentration> a iop:Property ;
+    rdfs:label "mass concentration" .

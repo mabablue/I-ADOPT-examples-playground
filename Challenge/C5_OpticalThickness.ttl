@@ -1,0 +1,36 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C5 a iop:Variable ;
+    rdfs:label "Atmosphere optical thickness of particulate organic matter ambient aerosol" ;
+    rdfs:comment "Atmospheric optical thickness of particulate organic matter at 550nm under ambient conditions." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/22" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "at 550nm wavelength" ;
+            iop:constrains <https://vocabulary.actris.nilu.no/actris_vocab/opticaldepth> ] ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "having organic matter composition" ;
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/30361> ] ;
+    iop:hasMatrix <http://vocabs.lter-europe.net/EnvThes/30361> ;
+    iop:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/30361> ;
+    iop:hasContextObject <http://vocabs.lter-europe.net/EnvThes/21920> ;
+    iop:hasProperty <https://vocabulary.actris.nilu.no/actris_vocab/opticaldepth> ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "under ambient pressure" ;
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/21920> ] ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "under ambient temperature" ;
+            iop:constrains <http://vocabs.lter-europe.net/EnvThes/21920> ] .
+<http://vocabs.lter-europe.net/EnvThes/30361> a iop:Entity ;
+    rdfs:label "paticles of matter" .
+
+<http://vocabs.lter-europe.net/EnvThes/21920>  a iop:Entity ;
+    rdfs:label "atmosphere" .
+
+<http://vocabs.lter-europe.net/EnvThes/20887> a iop:Entity ;
+    rdfs:label "organic matter" .
+
+<https://vocabulary.actris.nilu.no/actris_vocab/opticaldepth> a iop:Property ;
+    rdfs:label "optical depth" .
+

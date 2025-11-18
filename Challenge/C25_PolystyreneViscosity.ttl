@@ -1,0 +1,19 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:C25 a iop:Variable ;
+    rdfs:label "Dynamic shear viscosity of polystyrene PS042" ;
+    rdfs:comment "Dynamic shear viscosity of polystyrene PS042 under the testing conditions of DIN 51810-1." ;
+    ex:issue "https://github.com/i-adopt/examples/issues/42" ;
+    iop:hasConstraint [ a iop:Constraint ;
+            rdfs:label "dynamic" ;
+            iop:constrains <http://purl.jp/bio/4/id/200906084861039558> ] ;
+    iop:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_53276> ;
+    iop:hasProperty <http://purl.jp/bio/4/id/200906084861039558> .
+
+<http://purl.obolibrary.org/obo/CHEBI_53276> a iop:Entity ;
+    rdfs:label "polystyrene" .
+
+<http://purl.jp/bio/4/id/200906084861039558> a iop:Property ;
+    rdfs:label "shear viscosity" .
