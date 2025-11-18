@@ -23,7 +23,7 @@ ex:C2 a iop:Variable ;
     rdfs:label "atmosphere" .
 
 <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> a iop:Property ;
-    rdfs:label "temperature" .
+    rdfs:label "thermodynamic temperature" .
 
 <http://www.ontology-of-units-of-measure.org/resource/om-2/maximum> a iop:StatisticalModifier ;
     rdfs:label "maximum" .
