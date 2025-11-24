@@ -1,0 +1,22 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:mp a iop:Variable ;
+    rdfs:label "melting point of a pure solid substance" ;
+    rdfs:comment "measurement of the thermodynamic temperature (or temperature range) for the transformation of a pure solid into a liquid" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "at the solid to liquid phase transition" ;
+      iop:constrains ex:Prop
+    ] ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "chemical substance" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "thermodynamic temperature" .

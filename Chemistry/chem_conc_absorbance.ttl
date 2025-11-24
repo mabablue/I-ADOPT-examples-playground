@@ -1,0 +1,31 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:conc a iop:Variable ;
+    rdfs:label "concentration of solute substance, derived from a sample, using visible spectrophotometry" ;
+    rdfs:comment "analysis of a solution concentration of a substance by the quantitative formation of a colored product substance" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "thermodynamic temperature (optional)" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "using colored reaction product" ;
+      iop:constrains ex:Prop
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "sample solution" .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "solute chemical substance" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "amount-of-substance concentration" .

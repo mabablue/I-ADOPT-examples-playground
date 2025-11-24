@@ -1,0 +1,43 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:combustion a iop:Variable ;
+    rdfs:label "energy of reaction per mole upon combustion in oxygen of a pure substance" ;
+    rdfs:comment "energy released (or taken in) upon combustion of a chemical subtance to form carbon dioxide and water" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "purity of substance (required)" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "mass of substance (required)" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "phase of matter (optional)" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "gas pressure (required)" ;
+      iop:constrains ex:Matrix
+    ], [
+      a iop:Constraint ;
+      rdfs:label "percent oxygen in atmosphere (required)" ;
+      iop:constrains ex:Matrix
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "combustion reaction" .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "chemical substance" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "energy change per amount-of-substance" .

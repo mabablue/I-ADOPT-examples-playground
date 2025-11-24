@@ -1,0 +1,54 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:someVar a iop:Variable ;
+    rdfs:label "solubility of a liquid non-polar substance in a liquid polar substance" ;
+    rdfs:comment "mutual solubility measurement between two immiscible phases at phase equilibrium" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "liquid phase" ;
+      iop:constrains ex:Matrix_SysA
+    ], [
+      a iop:Constraint ;
+      rdfs:label "liquid phase" ;
+      iop:constrains ex:Matrix_SysB
+    ], [
+      a iop:Constraint ;
+      rdfs:label "liquid phase" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "thermodynamic temperature (required)" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "measurement method (required)" ;
+      iop:constrains ex:Prop
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "two-phase liquid-liquid system" ;
+    iop:hasSource ex:Matrix_SysA;
+    iop:hasTarget ex:Matrix_SysB.
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "non-polar chemical substance" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "solubility" .
+
+ex:Matrix_SysA
+    a iop:Entity ;
+    rdfs:label "non-polar substance" .
+
+ex:Matrix_SysB
+    a iop:Entity ;
+    rdfs:label "polar substance" .
+          
