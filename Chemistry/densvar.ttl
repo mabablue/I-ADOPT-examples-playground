@@ -1,0 +1,26 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:densvar a iop:Variable ;
+    rdfs:label "density of benzene" ;
+    rdfs:comment "mass density of a 10.00 mL sample of ACS reagent grade (99.0 %(v/v) benzene at a room temperature" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "local room temperature" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "10.00 mL sample" ;
+      iop:constrains ex:OoI
+    ] ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "benzene (C6H6)" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "mass density" .

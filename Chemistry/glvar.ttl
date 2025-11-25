@@ -1,0 +1,57 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:glvar a iop:Variable ;
+    rdfs:label "solubility of molecular oxygen from air in water" ;
+    rdfs:comment "measurement of the solubility of molecuar oxygen in air in MilliQ water (18.2 MOhm) using the static method" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "local air (atmosphere)" ;
+      iop:constrains ex:SysSource
+    ], [
+      a iop:Constraint ;
+      rdfs:label "MilliQ purity" ;
+      iop:constrains ex:SysTarget
+    ], [
+      a iop:Constraint ;
+      rdfs:label "partial pressure of molecular oxygen in the gas phase" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "thermodynamic temperature" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "atmospheric pressure" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "static method" ;
+      iop:constrains ex:Prop
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "two-phase gas-liquid system" ;
+    iop:hasSource ex:SysSource;
+    iop:hasTarget ex:SysTarget.
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "molecular oxygen" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "solubility" .
+
+ex:SysSource
+    a iop:Entity ;
+    rdfs:label "air (gas)" .
+
+ex:SysTarget
+    a iop:Entity ;
+    rdfs:label "water (liquid)" .

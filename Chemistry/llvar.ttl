@@ -1,0 +1,57 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:llvar a iop:Variable ;
+    rdfs:label "solubility of benezne in water" ;
+    rdfs:comment "mutual solubility (g/L) measurement (immiscible phases) of 99.82 %(w/w) pure benzene in deionized water at phase equilibrium and 298.15 K" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "liquid phase" ;
+      iop:constrains ex:SysSource
+    ], [
+      a iop:Constraint ;
+      rdfs:label "liquid phase" ;
+      iop:constrains ex:SysTarget
+    ], [
+      a iop:Constraint ;
+      rdfs:label "purity 99.82 %(w/w)" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "type: mass/volume" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "298.15 K" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "static method" ;
+      iop:constrains ex:Prop
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "two-phase immiscible liquid-liquid system" ;
+    iop:hasSource ex:SysSource;
+    iop:hasTarget ex:SysTarget.
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "solubilized benzene" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "solubility" .
+
+ex:SysSource
+    a iop:Entity ;
+    rdfs:label "benzene (C6H6)" .
+
+ex:SysTarget
+    a iop:Entity ;
+    rdfs:label "water (H2O)" .

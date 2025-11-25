@@ -1,0 +1,39 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:combvar a iop:Variable ;
+    rdfs:label "estimation of the energy of reaction per mole upon combustion of hexanol" ;
+    rdfs:comment "energy released (or taken in) upon quanitiative combustion of a 5.00 g sample of 99.98%(w/w) pure hexanol in air" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "purity 99.98%(w/w)" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "5.00 g sample" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "at local atmospheric presure" ;
+      iop:constrains ex:Matrix
+    ], [
+      a iop:Constraint ;
+      rdfs:label "at local atmospheric oxygen level" ;
+      iop:constrains ex:Matrix
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "combustion reaction" .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "hexanol (C6H14O)" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "energy change per amount-of-substance" .

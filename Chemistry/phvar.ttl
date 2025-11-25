@@ -1,0 +1,27 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:phvar a iop:Variable ;
+    rdfs:label "pH measurement of a sample of apple juice" ;
+    rdfs:comment "solution hydronium ion concentration measurement in a apple juice using a solid-state pH electrode" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "measured with a solid-state pH electrode" ;
+      iop:constrains ex:Prop
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "homogeneous solution of apple juice" .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "all hydronium contributing compounds (acids)" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "pH" .
