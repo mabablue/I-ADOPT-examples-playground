@@ -3,19 +3,19 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 ex:bpvar a iop:Variable ;
-    rdfs:label "boiling point of benzene under standard conditions" ;
-    rdfs:comment "measurement of the thermodynamic temperature (or temperature range) for the transformation of a known purity (99.07% (v/v)) liquid sample of benzene into a gas at an atmospheric pressure of 1 atm" ;
+    rdfs:label "boiling point of benzene" ;
+    rdfs:comment "measurement of the thermodynamic temperature (or temperature range) for the transformation of a known purity (99.07% (v/v)) liquid sample of benzene into a gas at atmospheric pressure" ;
     iop:hasConstraint [
       a iop:Constraint ;
-      rdfs:label "at the liquid to gas phase transition" ;
+      rdfs:label "temporal event: liquid to gas phase transition" ;
       iop:constrains ex:Prop
     ], [
       a iop:Constraint ;
-      rdfs:label "1 atm pressure" ;
+      rdfs:label "condition: atmospheric pressure" ;
       iop:constrains ex:Prop
     ], [
       a iop:Constraint ;
-      rdfs:label "purity 99.07% (v/v)" ;
+      rdfs:label "quality: purity 99.07% (v/v)" ;
       iop:constrains ex:OoI
     ] ;
     iop:hasObjectOfInterest ex:OoI ;
@@ -23,7 +23,7 @@ ex:bpvar a iop:Variable ;
 
 ex:OoI
     a iop:Entity ;
-    rdfs:label "benzene (C6H6)" .
+    rdfs:label "benzene" .
 
 ex:Prop
     a iop:Property ;
