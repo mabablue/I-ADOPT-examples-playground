@@ -1,27 +1,40 @@
-@prefix ex: <http://example.org/iadopt/challenge/> .
 @prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
 
-ex:phvar a iop:Variable ;
-    rdfs:label "pH measurement of a sample of apple juice" ;
-    rdfs:comment "solution hydronium ion concentration measurement in a apple juice using a solid-state pH electrode" ;
-    iop:hasConstraint [
-      a iop:Constraint ;
-      rdfs:label "measured with a solid-state pH electrode" ;
-      iop:constrains ex:Prop
-    ] ;
-    iop:hasMatrix ex:Matrix ;
-    iop:hasObjectOfInterest ex:OoI ;
-    iop:hasProperty ex:Prop .
+ex:phvar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "pH measurement of a sample of apple juice" ;
+    skos:definition 
+        """pH of a sample of apple juice using a solid-state pH electrode""" ;
+    rdfs:comment 
+        """hydronium ion; apple juice; pH""" ;
+    iop:hasObjectOfInterest 
+        <https://www.wikidata.org/wiki/Q849881> ;
+    iop:hasMatrix 
+        <https://www.wikidata.org/wiki/Q618355> ;
+    iop:hasProperty 
+        <https://www.wikidata.org/wiki/Q40936> .
 
-ex:Matrix
-    a iop:Entity, iop:System ;
-    rdfs:label "homogeneous solution of apple juice" .
+<https://www.wikidata.org/wiki/Q849881>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "hydronium ion" .
 
-ex:OoI
-    a iop:Entity ;
-    rdfs:label "all hydronium contributing compounds (acids)" .
+<https://www.wikidata.org/wiki/Q618355>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "apple juice" .
 
-ex:Prop
-    a iop:Property ;
-    rdfs:label "pH" .
+<https://www.wikidata.org/wiki/Q40936>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "pH" .
