@@ -4,18 +4,22 @@
 
 ex:concvar a iop:Variable ;
     rdfs:label "determination of iron concentration in a soil sample by colorimetric analysis using ortho-phenanthroline" ;
-    rdfs:comment "analysis of an iron(II) solution derived from a soil sample (via digestion and dilution) using a quantitative reaction with o-phenantroline and product color measurement of absorbance at 510 nm" ;
+    rdfs:comment "determination of iron(II) derived from a soil sample (via acid digestion and dilution) using a colorimetric reaction with o-phenanthroline and measurement of absorbance at 510 nm" ;
     iop:hasConstraint [
       a iop:Constraint ;
-      rdfs:label "reaction with o-phenanthroline" ;
+      rdfs:label "conversion: reaction with o-phenanthroline" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "conversion: acid digestion" ;
       iop:constrains ex:Matrix
     ], [
       a iop:Constraint ;
-      rdfs:label "derived from soil sample" ;
+      rdfs:label "conversion: dilution" ;
       iop:constrains ex:Matrix
     ], [
       a iop:Constraint ;
-      rdfs:label "measurement at 510 nm" ;
+      rdfs:label "condition: at 510 nm wavelength" ;
       iop:constrains ex:Prop
     ] ;
     iop:hasMatrix ex:Matrix ;
@@ -24,12 +28,12 @@ ex:concvar a iop:Variable ;
 
 ex:Matrix
     a iop:Entity, iop:System ;
-    rdfs:label "analysis solution" .
+    rdfs:label "soil" .
 
 ex:OoI
     a iop:Entity ;
-    rdfs:label "aqueous iron(II) ion" .
+    rdfs:label "iron" .
 
 ex:Prop
     a iop:Property ;
-    rdfs:label "amount-of-substance concentration" .
+    rdfs:label "molar concentration" .
