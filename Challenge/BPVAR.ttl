@@ -5,38 +5,38 @@
 @prefix ex: <http://example.org/iadopt/challenge/> .
 @prefix iopp: <https://w3id.org/iadopt/pattern/> .
 
-ex:bpvar
+ex:bp
     a 
         iop:Variable ;
     rdfs:label 
-        "boiling point of benzene" ;
+        "bioling point of a pure liquid substance" ;
     rdfs:comment 
-        """measurement of the thermodynamic temperature (or temperature range) for the transformation of a known purity (99.07% (v/v)) liquid sample of benzene into a gas at atmospheric pressure""" ;
+        """measurement of the thermodynamic temperature (or temperature range) for the transformation of a pure liquid into a gas""" ;
     iop:hasObjectOfInterest 
-        <https://www.wikidata.org/wiki/Q2270> ;
+        ex:OoI ;
     iop:hasProperty 
-        <https://www.wikidata.org/wiki/Q264647> ;
+        ex:Prop ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "temporal extent: liquid to gas phase transition" ;
-             iop:constrains <https://www.wikidata.org/wiki/Q264647> ;
+             rdfs:label "temporal extent: at the liquid to gas phase transition" ;
+             iop:constrains ex:Prop ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "condition: at 1 atm pressure" ;
-             iop:constrains <https://www.wikidata.org/wiki/Q264647> ;
+             iop:constrains ex:Prop ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "quality: purity 99.07% (v/v)" ;
-             iop:constrains <https://www.wikidata.org/wiki/Q2270> ;
+             rdfs:label "quality: purity 99.07 % v/v" ;
+             iop:constrains ex:OoI ;
         ] .
 
-<https://www.wikidata.org/wiki/Q2270>
+ex:OoI
     a 
         iop:Entity ;
     rdfs:label 
         "benzene" .
 
-<https://www.wikidata.org/wiki/Q264647>
+ex:Prop
     a 
         iop:Property ;
     rdfs:label 
