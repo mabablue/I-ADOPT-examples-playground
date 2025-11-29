@@ -32,10 +32,6 @@ ex:slvar
              iop:constrains <https://www.wikidata.org/wiki/Q283> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "equilibrium mixture of a solid and a liquid" ;
-             iop:constrains <https://www.wikidata.org/wiki/Q179724> ;
-        ] ,
-        [ a iop:Constraint ;
              rdfs:label "condition: at room temperature" ;
              iop:constrains <https://www.wikidata.org/wiki/Q170731> ;
         ] ,
