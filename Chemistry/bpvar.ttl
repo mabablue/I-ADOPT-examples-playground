@@ -3,6 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
 
 ex:bpvar
     a 
@@ -21,7 +22,7 @@ ex:bpvar
              iop:constrains <https://www.wikidata.org/wiki/Q264647> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "condition: at atmospheric pressure" ;
+             rdfs:label "condition: at 1 atm pressure" ;
              iop:constrains <https://www.wikidata.org/wiki/Q264647> ;
         ] ,
         [ a iop:Constraint ;
