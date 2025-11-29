@@ -1,30 +1,42 @@
-@prefix ex: <http://example.org/iadopt/challenge/> .
 @prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
 
-ex:bpvar a iop:Variable ;
-    rdfs:label "boiling point of benzene" ;
-    rdfs:comment "measurement of the thermodynamic temperature (or temperature range) for the transformation of a known purity (99.07% (v/v)) liquid sample of benzene into a gas at atmospheric pressure" ;
-    iop:hasConstraint [
-      a iop:Constraint ;
-      rdfs:label "temporal event: liquid to gas phase transition" ;
-      iop:constrains ex:Prop
-    ], [
-      a iop:Constraint ;
-      rdfs:label "condition: atmospheric pressure" ;
-      iop:constrains ex:Prop
-    ], [
-      a iop:Constraint ;
-      rdfs:label "quality: purity 99.07% (v/v)" ;
-      iop:constrains ex:OoI
-    ] ;
-    iop:hasObjectOfInterest ex:OoI ;
-    iop:hasProperty ex:Prop .
+ex:bpvar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "boiling point of benzene" ;
+    rdfs:comment 
+        """measurement of the thermodynamic temperature (or temperature range) for the transformation of a known purity (99.07% (v/v)) liquid sample of benzene into a gas at atmospheric pressure""" ;
+    iop:hasObjectOfInterest 
+        <https://www.wikidata.org/wiki/Q2270> ;
+    iop:hasProperty 
+        <https://www.wikidata.org/wiki/Q264647> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "temporal extent: liquid to gas phase transition" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q264647> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "condition: at atmospheric pressure" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q264647> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "quality: purity 99.07% (v/v)" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q2270> ;
+        ] .
 
-ex:OoI
-    a iop:Entity ;
-    rdfs:label "benzene" .
+<https://www.wikidata.org/wiki/Q2270>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "benzene" .
 
-ex:Prop
-    a iop:Property ;
-    rdfs:label "thermodynamic temperature" .
+<https://www.wikidata.org/wiki/Q264647>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "thermodynamic temperature" .
