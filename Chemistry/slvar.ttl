@@ -1,57 +1,82 @@
-@prefix ex: <http://example.org/iadopt/challenge/> .
 @prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
 
-ex:slvar a iop:Variable ;
-    rdfs:label "solubility of naphthalene in water at room temperature" ;
-    rdfs:comment "solubility measurement of napathalene in deionized water at room temperature by monitoring absorption at 279 nm" ;
-    iop:hasConstraint [
-      a iop:Constraint ;
-      rdfs:label "solid phase" ;
-      iop:constrains ex:SysSource
-    ], [
-      a iop:Constraint ;
-      rdfs:label "liquid phase" ;
-      iop:constrains ex:SysTarget
-    ], [
-      a iop:Constraint ;
-      rdfs:label "equilibrium mixture of a solid and a liquid" ;
-      iop:constrains ex:OoI
-    ], [
-      a iop:Constraint ;
-      rdfs:label "local room temperature" ;
-      iop:constrains ex:Prop
-    ], [
-      a iop:Constraint ;
-      rdfs:label "monitoring at 279 nm" ;
-      iop:constrains ex:Prop
-    ], [
-      a iop:Constraint ;
-      rdfs:label "type: mass/volume" ;
-      iop:constrains ex:Prop
-    ] ;
-    iop:hasMatrix ex:Matrix ;
-    iop:hasObjectOfInterest ex:OoI ;
-    iop:hasProperty ex:Prop .
+ex:slvar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "solubility of naphthalene in water at room temperature" ;
+    rdfs:comment 
+        """solubility measurement of napathalene in deionized water at room temperature by monitoring absorption at 279 nm""" ;
+    iop:hasObjectOfInterest 
+        <https://www.wikidata.org/wiki/Q179724> ;
+    iop:hasMatrix 
+        ex:Matrix ;
+    iop:hasProperty 
+        <https://www.wikidata.org/wiki/Q170731> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "state: solid phase" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q179724> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "state: dissolved" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q179724> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "state: liquid phase" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q283> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "equilibrium mixture of a solid and a liquid" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q179724> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "condition: at room temperature" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q170731> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "condition: at 279 nm wavelength" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q170731> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "quality: dionized" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q283> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "state: at solid-liquid equilibrium" ;
+             iop:constrains ex:Matrix ;
+        ] .
+
+<https://www.wikidata.org/wiki/Q179724>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "naphthalene (C10H8)" .
 
 ex:Matrix
-    a iop:Entity, iop:System ;
-    rdfs:label "two-phase solid-liquid system" ;
-    iop:hasSource ex:SysSource;
-    iop:hasTarget ex:SysTarget.
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    rdfs:label 
+        "two-phase solid-liquid system" ;
+    iop:hasSource 
+        <https://www.wikidata.org/wiki/Q179724> ;
+    iop:hasTarget 
+        <https://www.wikidata.org/wiki/Q283> .
 
-ex:OoI
-    a iop:Entity ;
-    rdfs:label "solubilized napthalene" .
+<https://www.wikidata.org/wiki/Q170731>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "solubility" .
 
-ex:Prop
-    a iop:Property ;
-    rdfs:label "solubility" .
-
-ex:SysSource
-    a iop:Entity ;
-    rdfs:label "naphthalene (C10H8)" .
-
-ex:SysTarget
-    a iop:Entity ;
-    rdfs:label "water (H2O)" .
+<https://www.wikidata.org/wiki/Q283>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water (H2O)" .
