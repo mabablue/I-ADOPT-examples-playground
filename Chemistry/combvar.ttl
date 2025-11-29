@@ -1,39 +1,55 @@
-@prefix ex: <http://example.org/iadopt/challenge/> .
 @prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
 
-ex:combvar a iop:Variable ;
-    rdfs:label "estimation of the energy of reaction per mole upon combustion of hexanol" ;
-    rdfs:comment "energy released (or taken in) upon quanitiative combustion of a 5.00 g sample of 99.98%(w/w) pure hexanol in air" ;
-    iop:hasConstraint [
-      a iop:Constraint ;
-      rdfs:label "purity 99.98%(w/w)" ;
-      iop:constrains ex:OoI
-    ], [
-      a iop:Constraint ;
-      rdfs:label "5.00 g sample" ;
-      iop:constrains ex:OoI
-    ], [
-      a iop:Constraint ;
-      rdfs:label "at local atmospheric presure" ;
-      iop:constrains ex:Matrix
-    ], [
-      a iop:Constraint ;
-      rdfs:label "at local atmospheric oxygen level" ;
-      iop:constrains ex:Matrix
-    ] ;
-    iop:hasMatrix ex:Matrix ;
-    iop:hasObjectOfInterest ex:OoI ;
-    iop:hasProperty ex:Prop .
+ex:combvar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "estimation of the energy of reaction per mole upon combustion of hexanol" ;
+    rdfs:comment 
+        """energy released (or taken in) upon quanitiative combustion of a 5.00 g sample of 99.98%(w/w) pure hexanol in air""" ;
+    iop:hasObjectOfInterest 
+        <https://www.wikidata.org/wiki/Q76933> ;
+    iop:hasMatrix 
+        <https://www.wikidata.org/wiki/Q133235> ;
+    iop:hasProperty 
+        <https://www.wikidata.org/wiki/Q11379> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "quality: purity 99.98%(w/w)" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q76933> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "condition: at atmospheric pressure" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q133235> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "condition: at atmospheric oxygen level" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q133235> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "temporal extent: chemical reaction" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q11379> ;
+        ] .
 
-ex:Matrix
-    a iop:Entity, iop:System ;
-    rdfs:label "combustion reaction" .
+<https://www.wikidata.org/wiki/Q76933>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "hexanol (C6H14O)" .
 
-ex:OoI
-    a iop:Entity ;
-    rdfs:label "hexanol (C6H14O)" .
+<https://www.wikidata.org/wiki/Q133235>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "combustion reaction" .
 
-ex:Prop
-    a iop:Property ;
-    rdfs:label "energy change per amount-of-substance" .
+<https://www.wikidata.org/wiki/Q11379>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "energy" .
