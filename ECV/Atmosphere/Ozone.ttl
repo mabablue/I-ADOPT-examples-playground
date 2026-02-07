@@ -15,8 +15,15 @@ ex:O3
         _:b0 ;
     iop:hasMatrix 
         <http://vocab.nerc.ac.uk/collection/P21/current/MS292/> ;
+    iop:hasContextObject 
+        <http://vocab.nerc.ac.uk/collection/S21/current/S21S001/> ;
     iop:hasProperty 
-        <https://vocab.nerc.ac.uk/collection/S06/current/S0600073/> .
+        _:b1 ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "defined by: measured from Earth's surface to the upper edge of the atmosphere" ;
+             iop:constrains _:b1 ;
+        ] .
 
 _:b0
     a 
@@ -33,11 +40,17 @@ _:b0
     rdfs:label 
         "air" .
 
-<https://vocab.nerc.ac.uk/collection/S06/current/S0600073/>
+_:b1
     a 
         iop:Property ;
     rdfs:label 
-        "mole fraction" .
+        "mole per area" .
+
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S001/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "atmosphere" .
 
 <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
     a 
