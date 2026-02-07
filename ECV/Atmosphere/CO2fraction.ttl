@@ -4,7 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ex: <http://example.org/iadopt/challenge/> .
 
-_:b0
+ex:CO2
     a 
         iop:Variable ;
     rdfs:label 
