@@ -12,30 +12,30 @@
     rdfs:comment 
         """The flux density of the fraction of incoming photosynthetically active radiation that remains after being absorbed by vegetation canopy. """ ;
     iop:hasObjectOfInterest 
-        _:b0 ;
+        <https://www.wikidata.org/entity/Q900892> ;
     iop:hasProperty 
-        _:b1 ;
+        <https://www.wikidata.org/entity/Q83699542> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "type: incoming" ;
-             iop:constrains _:b0 ;
+             iop:constrains <https://www.wikidata.org/entity/Q900892> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "condition: absorbed by the canopy" ;
-             iop:constrains _:b0 ;
+             iop:constrains <https://www.wikidata.org/entity/Q900892> ;
         ] ,
         [ a iop:Constraint ;
              rdfs:label "location: below the canopy" ;
-             iop:constrains _:b1 ;
+             iop:constrains <https://www.wikidata.org/entity/Q900892> ;
         ] .
 
-_:b0
+<https://www.wikidata.org/entity/Q900892>
     a 
         iop:Entity ;
     rdfs:label 
         "photosynthetically active radiation" .
 
-_:b1
+<https://www.wikidata.org/entity/Q83699542>
     a 
         iop:Property ;
     rdfs:label 
