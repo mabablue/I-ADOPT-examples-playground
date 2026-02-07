@@ -1,0 +1,42 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+<http://example.org/PPFD_BC>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Incoming Photosynthetic Photon Flux Density below canopy" ;
+    rdfs:comment 
+        """The flux density of the fraction of incoming photosynthetically active radiation that remains after being absorbed by vegetation canopy. """ ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasProperty 
+        _:b1 ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "type: incoming" ;
+             iop:constrains _:b0 ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "condition: absorbed by the canopy" ;
+             iop:constrains _:b0 ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "location: below the canopy" ;
+             iop:constrains _:b1 ;
+        ] .
+
+_:b0
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "photosynthetically active radiation" .
+
+_:b1
+    a 
+        iop:Property ;
+    rdfs:label 
+        "photon flux" .
