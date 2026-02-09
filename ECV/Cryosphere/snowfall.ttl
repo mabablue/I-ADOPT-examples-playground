@@ -12,14 +12,29 @@ ex:snow_amount
     rdfs:comment 
         """snowfall amount measured in mm.""" ;
     iop:hasObjectOfInterest 
-        <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
-    iop:hasProperty 
         _:b0 ;
+    iop:hasProperty 
+        _:b1 ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "origin: snowfall" ;
              iop:constrains <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
         ] .
+
+_:b0
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasNumerator 
+        <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
+    iop:hasDenominator 
+        <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/> .
+
+_:b1
+    a 
+        iop:Property ;
+    rdfs:label 
+        "volume per area" .
 
 <http://vocab.nerc.ac.uk/collection/P29/current/snow/>
     a 
@@ -27,8 +42,8 @@ ex:snow_amount
     rdfs:label 
         "snow" .
 
-_:b0
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
     a 
-        iop:Property ;
+        iop:Entity ;
     rdfs:label 
-        "volume per area" .
+        "ground surface" .
