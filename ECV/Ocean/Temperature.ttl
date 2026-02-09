@@ -13,7 +13,7 @@
         """Radiative skin sea surface temperature, or Bulk sea surface temperature at stated depth""" ;
     iop:hasObjectOfInterest 
         <http://vocabs.lter-europe.net/EnvThes/22225> ;
-    iop:hasContextObject 
+    iop:hasMatrix
         <http://purl.obolibrary.org/obo/ENVO_00000016> ;
     iop:hasProperty 
         <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
