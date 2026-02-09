@@ -21,10 +21,6 @@
         [ a iop:Constraint ;
              rdfs:label "location: at the surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
-        ] ,
-        [ a iop:Constraint ;
-             rdfs:label "defined by: The quantity of dissolved ions expressed on a scale (PSS-78) based on the conductivity ratio of a seawater sample to a standard KCl solution." ;
-             iop:constrains <http://vocab.nerc.ac.uk/collection/S06/current/S0600083/> ;
         ] .
 
 <http://vocabs.lter-europe.net/EnvThes/22225>
