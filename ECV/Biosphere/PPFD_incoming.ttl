@@ -21,10 +21,6 @@
              iop:constrains <https://www.wikidata.org/entity/Q900892> ;
         ] ,
         [ a iop:Constraint ;
-             rdfs:label "condition: absorbed by the canopy" ;
-             iop:constrains <https://www.wikidata.org/entity/Q900892> ;
-        ] ,
-        [ a iop:Constraint ;
              rdfs:label "location: below the canopy" ;
              iop:constrains <https://www.wikidata.org/entity/Q900892> ;
         ] .
