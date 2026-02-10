@@ -14,8 +14,6 @@ ex:O3
     iop:hasObjectOfInterest 
         _:b0 ;
     iop:hasMatrix 
-        <http://vocab.nerc.ac.uk/collection/P21/current/MS292/> ;
-    iop:hasContextObject 
         <http://vocab.nerc.ac.uk/collection/S21/current/S21S001/> ;
     iop:hasProperty 
         _:b1 ;
@@ -34,23 +32,17 @@ _:b0
     iop:hasNumerator 
         <http://vocab.nerc.ac.uk/collection/S27/current/CS003171/> .
 
-<http://vocab.nerc.ac.uk/collection/P21/current/MS292/>
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S001/>
     a 
         iop:Entity ;
     rdfs:label 
-        "air" .
+        "atmosphere" .
 
 _:b1
     a 
         iop:Property ;
     rdfs:label 
         "mole per area" .
-
-<http://vocab.nerc.ac.uk/collection/S21/current/S21S001/>
-    a 
-        iop:Entity ;
-    rdfs:label 
-        "atmosphere" .
 
 <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
     a 
