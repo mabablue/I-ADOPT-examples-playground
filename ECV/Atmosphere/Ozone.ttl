@@ -62,4 +62,4 @@ _:b1
     a 
         iop:Entity ;
     rdfs:label 
-        "ozon" .
+        "ozone" .
