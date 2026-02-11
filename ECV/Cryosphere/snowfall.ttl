@@ -12,29 +12,18 @@ ex:snow_amount
     rdfs:comment 
         """snowfall amount measured in mm.""" ;
     iop:hasObjectOfInterest 
-        _:b0 ;
+        <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
     iop:hasProperty 
-        _:b1 ;
+        <https://qudt.org/vocab/quantitykind/Depth> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "origin: snowfall" ;
              iop:constrains <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "datum: relative to the compacted snow base" ;
+             iop:constrains <https://qudt.org/vocab/quantitykind/Depth> ;
         ] .
-
-_:b0
-    a 
-        iop:Entity ,
-        iop:AsymmetricSystem ;
-    iop:hasNumerator 
-        <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
-    iop:hasDenominator 
-        <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/> .
-
-_:b1
-    a 
-        iop:Property ;
-    rdfs:label 
-        "volume per area" .
 
 <http://vocab.nerc.ac.uk/collection/P29/current/snow/>
     a 
@@ -42,8 +31,8 @@ _:b1
     rdfs:label 
         "snow" .
 
-<http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
+<https://qudt.org/vocab/quantitykind/Depth>
     a 
-        iop:Entity ;
+        iop:Property ;
     rdfs:label 
-        "ground surface" .
+        "depth" .
