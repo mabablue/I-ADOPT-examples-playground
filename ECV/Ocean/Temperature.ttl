@@ -10,10 +10,10 @@
     rdfs:label 
         "Sea surface temperature" ;
     rdfs:comment 
-        """Radiative skin sea surface temperature, or Bulk sea surface temperature at stated depth""" ;
+        """Radiative skin sea surface temperature, given in K.""" ;
     iop:hasObjectOfInterest 
         <http://vocabs.lter-europe.net/EnvThes/22225> ;
-    iop:hasMatrix
+    iop:hasMatrix 
         <http://purl.obolibrary.org/obo/ENVO_00000016> ;
     iop:hasProperty 
         <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
@@ -21,6 +21,10 @@
         [ a iop:Constraint ;
              rdfs:label "location: at the surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "via:  thermal electromagnetic radiation" ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
         ] .
 
 <http://vocabs.lter-europe.net/EnvThes/22225>
@@ -29,14 +33,14 @@
     rdfs:label 
         "water" .
 
-<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
-    a 
-        iop:Property ;
-    rdfs:label 
-        "thermodynamic temperature" .
-
 <http://purl.obolibrary.org/obo/ENVO_00000016>
     a 
         iop:Entity ;
     rdfs:label 
         "sea" .
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "thermodynamic temperature" .
