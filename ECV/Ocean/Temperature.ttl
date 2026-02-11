@@ -1,0 +1,42 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+<http://example.org/Temperature>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Sea surface temperature" ;
+    rdfs:comment 
+        """Radiative skin sea surface temperature, or Bulk sea surface temperature at stated depth""" ;
+    iop:hasObjectOfInterest 
+        <http://vocabs.lter-europe.net/EnvThes/22225> ;
+    iop:hasMatrix
+        <http://purl.obolibrary.org/obo/ENVO_00000016> ;
+    iop:hasProperty 
+        <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "location: at the surface" ;
+             iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        ] .
+
+<http://vocabs.lter-europe.net/EnvThes/22225>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "thermodynamic temperature" .
+
+<http://purl.obolibrary.org/obo/ENVO_00000016>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea" .

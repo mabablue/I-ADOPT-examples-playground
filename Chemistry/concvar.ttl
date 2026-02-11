@@ -1,0 +1,39 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:concvar a iop:Variable ;
+    rdfs:label "determination of iron concentration in a soil sample by colorimetric analysis using ortho-phenanthroline" ;
+    rdfs:comment "determination of iron(II) derived from a soil sample (via acid digestion and dilution) using a colorimetric reaction with o-phenanthroline and measurement of absorbance at 510 nm" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "conversion: reaction with o-phenanthroline" ;
+      iop:constrains ex:OoI
+    ], [
+      a iop:Constraint ;
+      rdfs:label "conversion: acid digestion" ;
+      iop:constrains ex:Matrix
+    ], [
+      a iop:Constraint ;
+      rdfs:label "conversion: dilution" ;
+      iop:constrains ex:Matrix
+    ], [
+      a iop:Constraint ;
+      rdfs:label "condition: at 510 nm wavelength" ;
+      iop:constrains ex:Prop
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+    a iop:Entity, iop:System ;
+    rdfs:label "soil" .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "iron" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "molar concentration" .

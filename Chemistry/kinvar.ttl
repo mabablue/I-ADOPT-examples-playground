@@ -1,0 +1,40 @@
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# See https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Kinetics/08%3A_Review_of_Chemical_Kinetics Example A17.2
+ex:kinvar a iop:Variable ;
+    rdfs:label "measurement of the rate of reaction of the iodation of acetone at room temperature" ;
+    rdfs:comment "determination of the rate constant for the reaction of molecular iodine with acetone at room temperature under acid conditions using measurement of unreacted molecular iodine by reaciton with starch and color measurement at 600 nm" ;
+    iop:hasConstraint [
+      a iop:Constraint ;
+      rdfs:label "local room temperature" ;
+      iop:constrains ex:Matrix
+    ], [
+      a iop:Constraint ;
+      rdfs:label "at 600 nm" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "type: derived property" ;
+      iop:constrains ex:Prop
+    ], [
+      a iop:Constraint ;
+      rdfs:label "range of initial amount-of-substance concentrations (M) of reactants" ;
+      iop:constrains ex:OoI
+    ] ;
+    iop:hasMatrix ex:Matrix ;
+    iop:hasObjectOfInterest ex:OoI ;
+    iop:hasProperty ex:Prop .
+
+ex:Matrix
+     a iop:Entity, iop:System ;
+     rdfs:label "reaction of molecular iodine with acetone in acid" .
+
+ex:OoI
+    a iop:Entity ;
+    rdfs:label "rate of reaction under different concentrations of acetone and pH" .
+
+ex:Prop
+    a iop:Property ;
+    rdfs:label "rate constant of a reaction" .

@@ -1,0 +1,49 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+ex:snow_amount
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Snowfall amount" ;
+    rdfs:comment 
+        """snowfall amount measured in mm.""" ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasProperty 
+        _:b1 ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "origin: snowfall" ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
+        ] .
+
+_:b0
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasNumerator 
+        <http://vocab.nerc.ac.uk/collection/P29/current/snow/> ;
+    iop:hasDenominator 
+        <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/> .
+
+_:b1
+    a 
+        iop:Property ;
+    rdfs:label 
+        "volume per area" .
+
+<http://vocab.nerc.ac.uk/collection/P29/current/snow/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "snow" .
+
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "ground surface" .

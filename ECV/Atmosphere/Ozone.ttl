@@ -1,0 +1,57 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+ex:O3
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Ozone total column" ;
+    rdfs:comment 
+        """2D field of total amount of O3 molecules per unit area in an atmospheric column extending from the Earth’s surface to the upper edge of the atmosphere.""" ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasMatrix 
+        <http://vocab.nerc.ac.uk/collection/S21/current/S21S001/> ;
+    iop:hasProperty 
+        _:b1 ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "defined by: measured from Earth's surface to the upper edge of the atmosphere" ;
+             iop:constrains _:b1 ;
+        ] .
+
+_:b0
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasDenominator 
+        <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/> ;
+    iop:hasNumerator 
+        <http://vocab.nerc.ac.uk/collection/S27/current/CS003171/> .
+
+<http://vocab.nerc.ac.uk/collection/S21/current/S21S001/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "atmosphere" .
+
+_:b1
+    a 
+        iop:Property ;
+    rdfs:label 
+        "mole per area" .
+
+<http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "ground surface" .
+
+<http://vocab.nerc.ac.uk/collection/S27/current/CS003171/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "ozone" .
