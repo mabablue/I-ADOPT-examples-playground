@@ -42,7 +42,7 @@ _:b1
     a 
         iop:Property ;
     rdfs:label 
-        "mole per area" .
+        "moles per area" .
 
 <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
     a 
