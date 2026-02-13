@@ -1,0 +1,49 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+<https://vocab.nerc.ac.uk/collection/P01/current/RXUD412E/>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Downwelling vector irradiance as energy of electromagnetic radiation (412nm wavelength) in the water body by cosine-collector radiometer" ;
+    rdfs:comment 
+        """The vertical component of light at the specified wavelength travelling downwards.""" ;
+    iop:hasObjectOfInterest 
+        <http://vocab.nerc.ac.uk/collection/S18/current/S1800004/> ;
+    iop:hasMatrix 
+        <https://vocab.nerc.ac.uk/collection/S21/current/S21S027/> ;
+    iop:hasProperty 
+        <https://vocab.nerc.ac.uk/collection/S06/current/S0600131/> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "412nm wavelength" ;
+             rdfs:comment """The spatial period of a sinusoidal wave in nanometer.""" ;
+             iop:constrains <http://vocab.nerc.ac.uk/collection/S18/current/S1800004/> ;
+        ] .
+
+<http://vocab.nerc.ac.uk/collection/S18/current/S1800004/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "electromagnetic radiation" ;
+    rdfs:comment 
+        """The waves or particles (photons) of the electromagnetic field that propagate through space carrying energy; it includes radio waves, microwaves, infrared, (visible) light, ultraviolet, X-radiation and gamma radiation.""" .
+
+<https://vocab.nerc.ac.uk/collection/S21/current/S21S027/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water body" ;
+    rdfs:comment 
+        """A distinct and significant volume of fresh or salt water on the Earth's surface. Includes oceans, seas, estuaries, rivers, ponds and lakes.""" .
+
+<https://vocab.nerc.ac.uk/collection/S06/current/S0600131/>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "Downwelling vector irradiance as energy" ;
+    rdfs:comment 
+        """The downward vertical component of light as electromagnetic radiation energy.""" .
