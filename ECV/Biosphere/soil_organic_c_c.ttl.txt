@@ -1,0 +1,52 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+_:b0
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Soil organic carbon concentration" ;
+    rdfs:comment 
+        """line 35 in the excel""" ;
+    iop:hasObjectOfInterest 
+        _:b1 ;
+    iop:hasMatrix 
+        _:b2 ;
+    iop:hasProperty 
+        _:b3 .
+
+_:b1
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasNumerator 
+        _:b4 ;
+    iop:hasDenominator 
+        _:b5 .
+
+_:b2
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "soil" .
+
+_:b3
+    a 
+        iop:Property ;
+    rdfs:label 
+        "concentration" .
+
+_:b4
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "carbon" .
+
+_:b5
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "soil" .
