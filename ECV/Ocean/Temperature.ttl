@@ -4,19 +4,24 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ex: <http://example.org/iadopt/challenge/> .
 
-<http://example.org/Salinity>
+<http://example.org/Temperature>
     a 
         iop:Variable ;
     rdfs:label 
-        "Practical salinity of sea surface water" ;
+        "Sea surface temperature" ;
     rdfs:comment 
-        """Practical salinity is defined by the quantity of dissolved ions expressed on a scale (PSS-78) based on the conductivity ratio of a seawater sample to a standard KCl solution.""" ;
+        """Radiative skin sea surface temperature, given in K.""" ;
     iop:hasObjectOfInterest 
         <http://vocabs.lter-europe.net/EnvThes/22225> ;
     iop:hasMatrix 
         <http://purl.obolibrary.org/obo/ENVO_01001581> ;
     iop:hasProperty 
-        <http://vocab.nerc.ac.uk/collection/S06/current/S0600083/> .
+        <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "via:  thermal electromagnetic radiation" ;
+             iop:constrains <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+        ] .
 
 <http://vocabs.lter-europe.net/EnvThes/22225>
     a 
@@ -30,8 +35,8 @@
     rdfs:label 
         "sea surface layer" .
 
-<http://vocab.nerc.ac.uk/collection/S06/current/S0600083/>
+<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
     a 
         iop:Property ;
     rdfs:label 
-        "practical salinity" .
+        "thermodynamic temperature" .
