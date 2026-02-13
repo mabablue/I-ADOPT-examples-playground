@@ -14,14 +14,9 @@
     iop:hasObjectOfInterest 
         <http://vocabs.lter-europe.net/EnvThes/22225> ;
     iop:hasMatrix 
-        <http://purl.obolibrary.org/obo/ENVO_00000016> ;
+        <http://purl.obolibrary.org/obo/ENVO_01001581> ;
     iop:hasProperty 
-        <http://vocab.nerc.ac.uk/collection/S06/current/S0600083/> ;
-    iop:hasConstraint 
-        [ a iop:Constraint ;
-             rdfs:label "location: at the surface" ;
-             iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
-        ] .
+        <http://vocab.nerc.ac.uk/collection/S06/current/S0600083/> .
 
 <http://vocabs.lter-europe.net/EnvThes/22225>
     a 
@@ -29,11 +24,11 @@
     rdfs:label 
         "water" .
 
-<http://purl.obolibrary.org/obo/ENVO_00000016>
+<http://purl.obolibrary.org/obo/ENVO_01001581>
     a 
         iop:Entity ;
     rdfs:label 
-        "sea" .
+        "sea surface layer" .
 
 <http://vocab.nerc.ac.uk/collection/S06/current/S0600083/>
     a 
