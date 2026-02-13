@@ -1,0 +1,39 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+
+<https://vocab.nerc.ac.uk/collection/P01/current/ASLVRAD2/>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Surface elevation relative to Mean Sea Level datum of the water body by radar water level recorder (second sensor)" ;
+    rdfs:comment 
+        """Elevation of the sea surface relative to mean sea level datum, defined as sea level at a given location averaged over an unspecified long period of time, measured by a second radar water level recorder.""" ;
+    iop:hasObjectOfInterest 
+        <https://vocab.nerc.ac.uk/collection/S26/current/MAT00640/> ;
+    iop:hasProperty 
+        <https://vocab.nerc.ac.uk/collection/S06/current/S0600259/> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "relative to Mean Sea Level datum" ;
+             rdfs:comment """A vertical datum based on the arithmetic mean of hourly heights observed over the National Tidal Datum Epoch. Shorter series are specified in the name; e.g. monthly mean sea level and yearly mean sea level.""" ;
+             iop:constrains <https://vocab.nerc.ac.uk/collection/S06/current/S0600259/> ;
+        ] .
+
+<https://vocab.nerc.ac.uk/collection/S26/current/MAT00640/>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water body" ;
+    rdfs:comment 
+        """Any body of water from a puddle to an ocean considered as a whole.""" .
+
+<https://vocab.nerc.ac.uk/collection/S06/current/S0600259/>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "Surface elevation" ;
+    rdfs:comment 
+        """The vertical distance of the surface above (positive values) or below (negative values) a fixed reference point.""" .
