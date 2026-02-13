@@ -4,28 +4,19 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ex: <http://example.org/iadopt/challenge/> .
 
-<http://example.org/Temperature>
+<http://example.org/Salinity>
     a 
         iop:Variable ;
     rdfs:label 
-        "Sea surface temperature" ;
+        "Practical salinity of sea surface water" ;
     rdfs:comment 
-        """Radiative skin sea surface temperature, given in K.""" ;
+        """Practical salinity is defined by the quantity of dissolved ions expressed on a scale (PSS-78) based on the conductivity ratio of a seawater sample to a standard KCl solution.""" ;
     iop:hasObjectOfInterest 
         <http://vocabs.lter-europe.net/EnvThes/22225> ;
     iop:hasMatrix 
-        <http://purl.obolibrary.org/obo/ENVO_00000016> ;
+        <http://purl.obolibrary.org/obo/ENVO_01001581> ;
     iop:hasProperty 
-        <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
-    iop:hasConstraint 
-        [ a iop:Constraint ;
-             rdfs:label "location: at the surface" ;
-             iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
-        ] ,
-        [ a iop:Constraint ;
-             rdfs:label "via:  thermal electromagnetic radiation" ;
-             iop:constrains <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
-        ] .
+        <http://vocab.nerc.ac.uk/collection/S06/current/S0600083/> .
 
 <http://vocabs.lter-europe.net/EnvThes/22225>
     a 
@@ -33,14 +24,14 @@
     rdfs:label 
         "water" .
 
-<http://purl.obolibrary.org/obo/ENVO_00000016>
+<http://purl.obolibrary.org/obo/ENVO_01001581>
     a 
         iop:Entity ;
     rdfs:label 
-        "sea" .
+        "sea surface layer" .
 
-<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600083/>
     a 
         iop:Property ;
     rdfs:label 
-        "thermodynamic temperature" .
+        "practical salinity" .
