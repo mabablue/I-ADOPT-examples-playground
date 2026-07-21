@@ -17,7 +17,7 @@ ex:RadVelDirHF
         <http://qudt.org/vocab/quantitykind/PlaneAngle> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "relative to True North" ;
+             rdfs:label "reference: relative to True North" ;
              iop:constrains <http://qudt.org/vocab/quantitykind/PlaneAngle> ;
         ] .
 
