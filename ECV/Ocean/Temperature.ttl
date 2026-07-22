@@ -17,10 +17,6 @@
         <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
-             rdfs:label "via:  thermal electromagnetic radiation" ;
-             iop:constrains <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
-        ] ,
-        [ a iop:Constraint ;
              rdfs:label "layer: sea surface" ;
              iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
         ] .
