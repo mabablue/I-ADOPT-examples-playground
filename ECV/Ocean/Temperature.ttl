@@ -13,14 +13,16 @@
         """Radiative skin sea surface temperature, given in K.""" ;
     iop:hasObjectOfInterest 
         <http://vocabs.lter-europe.net/EnvThes/22225> ;
-    iop:hasMatrix 
-        <http://purl.obolibrary.org/obo/ENVO_01001581> ;
     iop:hasProperty 
         <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
     iop:hasConstraint 
         [ a iop:Constraint ;
              rdfs:label "via:  thermal electromagnetic radiation" ;
              iop:constrains <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "layer: sea surface" ;
+             iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
         ] .
 
 <http://vocabs.lter-europe.net/EnvThes/22225>
@@ -28,12 +30,6 @@
         iop:Entity ;
     rdfs:label 
         "water" .
-
-<http://purl.obolibrary.org/obo/ENVO_01001581>
-    a 
-        iop:Entity ;
-    rdfs:label 
-        "sea surface layer" .
 
 <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
     a 
