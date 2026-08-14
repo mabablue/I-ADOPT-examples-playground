@@ -1,0 +1,57 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+<http://example.org/CCA/I129>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Number of Iodine-129 atoms in sea water" ;
+    rdfs:comment 
+        """Number of Idione-129 isotopes in sea water from discharges of the nuclear fuel reprocessing plant at La Hague, France. Iodine-129 is a radioactive isotope of element Iodine, with a half-life of about 15.7 million years.
+Units: atoms kg-1""" ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q117750525> ;
+    iop:hasProperty 
+        <https://www.wikidata.org/entity/Q139568528> .
+
+_:b0
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasNumerator 
+        <https://www.wikidata.org/entity/Q2515411> ;
+    iop:hasDenominator 
+        <https://www.wikidata.org/entity/Q283> .
+
+<https://www.wikidata.org/entity/Q139568528>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "number density per unit mass" .
+
+<https://www.wikidata.org/entity/Q117750525>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "marine environment" .
+
+<https://www.wikidata.org/entity/Q2515411>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "Iodine-129" .
+
+<https://www.wikidata.org/entity/Q283>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .

@@ -1,0 +1,61 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+<http://example.org/iadopt/CCA/GCs187LH>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Radioactivity_content_of_137Cs_global_fallout" ;
+    rdfs:comment 
+        """Radioactivity content of Cesium-137 in sea water from global atmospheric fallout. Cesium-137 is a radioactive isotope of element cesium, with a half-life of about 30 years. Units: Becquerel per kilogram (Bq kg-1).""" ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q117750525> ;
+    iop:hasProperty 
+        <http://qudt.org/vocab/quantitykind/MassicActivity> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "source: global atmospheric fallout" ;
+             iop:constrains <https://www.wikidata.org/entity/Q1154826> ;
+        ] .
+
+_:b0
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasNumerator 
+        <https://www.wikidata.org/entity/Q1154826> ;
+    iop:hasDenominator 
+        <https://www.wikidata.org/entity/Q283> .
+
+<http://qudt.org/vocab/quantitykind/MassicActivity>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "Massic Activity" .
+
+<https://www.wikidata.org/entity/Q117750525>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "marine environment" .
+
+<https://www.wikidata.org/entity/Q1154826>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "Caesium-137" .
+
+<https://www.wikidata.org/entity/Q283>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .

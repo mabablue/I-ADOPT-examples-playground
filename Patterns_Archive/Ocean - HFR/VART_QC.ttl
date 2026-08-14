@@ -1,0 +1,41 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+ex:someVar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "VART_QC Variance quality flag" ;
+    skos:definition 
+        """QC flags for sea surface current velocity, good data flag for those whose temporal variance is smaller than a maximum variance threshold.""" ;
+   rdfs:comment 
+        """QC flags for sea surface current velocity, good data flag for those whose temporal variance is smaller than a maximum variance threshold.""" ;
+   ex:issue "https://github.com/mabablue/I-ADOPT-examples-playground/issues/77" ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasProperty 
+        <https://www.wikidata.org/wiki/Q137642315> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "threshold: good if termporal variance is smaller than a maximum variance threshold" ;
+             iop:constrains <https://www.wikidata.org/wiki/Q137642315> ;
+        ] .
+
+_:b0
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea surface current velocity" .
+
+<https://www.wikidata.org/wiki/Q137642315>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "quality flag" .

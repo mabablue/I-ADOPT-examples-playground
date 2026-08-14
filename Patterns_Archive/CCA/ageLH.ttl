@@ -1,0 +1,56 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+<http://example.org/CCA/ageLH>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Idealised_age_tracer_LaHage" ;
+    rdfs:comment 
+        """Idealized age tracer with linearly increased discharge of atoms from La Hage, France.  The release rate starts at 1.00E+20 atoms per second discharge in 1946, increasing by 1.00E+20 atoms per year, and reaches 7.30E+21 in 2018 at the end of simulation expressed in atoms per kg.""" ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q117750525> ;
+    iop:hasProperty 
+        <https://www.wikidata.org/entity/Q139568528> .
+
+_:b0
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasDenominator 
+        <https://www.wikidata.org/entity/Q283> ;
+    iop:hasNumerator 
+        <https://www.wikidata.org/entity/Q25276> .
+
+<https://www.wikidata.org/entity/Q139568528>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "number density per unit mass" .
+
+<https://www.wikidata.org/entity/Q117750525>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "marine environment" .
+
+<https://www.wikidata.org/entity/Q283>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .
+
+<https://www.wikidata.org/entity/Q25276>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "isotope" .

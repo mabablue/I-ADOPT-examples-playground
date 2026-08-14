@@ -1,0 +1,46 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+<http://example.org/Temperature>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Sea surface temperature" ;
+    rdfs:comment 
+        """Radiative skin sea surface temperature, given in K.""" ;
+    iop:hasObjectOfInterest 
+        <http://vocabs.lter-europe.net/EnvThes/22225> ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q117750525> ;
+    iop:hasProperty 
+        <http://qudt.org/vocab/quantitykind/ThermodynamicTemperature> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "part: surface" ;
+             iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        ] .
+
+<http://vocabs.lter-europe.net/EnvThes/22225>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "thermodynamic temperature" .
+
+<https://www.wikidata.org/entity/Q117750525>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "marine environment" .

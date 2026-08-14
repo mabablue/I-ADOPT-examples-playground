@@ -1,0 +1,46 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+<http://example.org/Salinity>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Practical salinity of sea surface water" ;
+    rdfs:comment 
+        """Practical salinity is defined by the quantity of dissolved ions expressed on a scale (PSS-78) based on the conductivity ratio of a seawater sample to a standard KCl solution.""" ;
+    iop:hasObjectOfInterest 
+        <http://vocabs.lter-europe.net/EnvThes/22225> ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q117750525> ;
+    iop:hasProperty 
+        <http://vocab.nerc.ac.uk/collection/S06/current/S0600083/> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "part: surface" ;
+             iop:constrains <http://vocabs.lter-europe.net/EnvThes/22225> ;
+        ] .
+
+<http://vocabs.lter-europe.net/EnvThes/22225>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .
+
+<http://vocab.nerc.ac.uk/collection/S06/current/S0600083/>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "practical salinity" .
+
+<https://www.wikidata.org/entity/Q117750525>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "marine environment" .

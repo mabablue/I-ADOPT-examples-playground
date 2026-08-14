@@ -1,0 +1,50 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/HFR> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+<http://example.org/iadopt/NSCT>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "NSCT Northward velocity of water current in the water body by high frequency radar" ;
+    rdfs:comment 
+        """Component of the sea surface current velocity that is directed northward (positive values)""" ;
+    iop:hasObjectOfInterest 
+        <https://www.wikidata.org/entity/Q283> ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q165> ;
+    iop:hasProperty 
+        <https://qudt.org/vocab/quantitykind/LinearVelocity> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "direction: northward" ;
+             iop:constrains <https://qudt.org/vocab/quantitykind/LinearVelocity> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "part: surface layer" ;
+             iop:constrains <https://www.wikidata.org/entity/Q283> ;
+        ] .
+
+<https://www.wikidata.org/entity/Q283>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water" .
+
+<https://qudt.org/vocab/quantitykind/LinearVelocity>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "linear velocity" .
+
+<https://www.wikidata.org/entity/Q165>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea" .

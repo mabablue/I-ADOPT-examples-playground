@@ -1,0 +1,66 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+ex:someVar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "UVAD Eastward velocity average in the water by a moored acoustic doppler current profile (ADCP)" ;
+    skos:definition 
+        """Eastward velocity average in the water by a moored acoustic doppler current profile measured in (m s-1)""" ;
+    rdfs:comment "water current; water body; average value; sea; velocity; eastward; eulerian" ;
+    ex:issue "https://github.com/mabablue/I-ADOPT-examples-playground/issues/66" ;
+    iop:hasObjectOfInterest 
+        <https://www.wikidata.org/entity/Q5195029> ;
+    iop:hasMatrix 
+        <https://www.wikidata.org/entity/Q15324> ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q165> ;
+    iop:hasStatisticalModifier 
+        <https://www.wikidata.org/entity/Q2796622> ;
+    iop:hasProperty 
+        <https://www.wikidata.org/entity/Q11465> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "type: eastward" ;
+             iop:constrains <https://www.wikidata.org/entity/Q11465> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "type: eulerian" ;
+             iop:constrains <https://www.wikidata.org/entity/Q11465> ;
+        ] .
+
+<https://www.wikidata.org/entity/Q5195029>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water current" .
+
+<https://www.wikidata.org/entity/Q15324>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water body" .
+
+<https://www.wikidata.org/entity/Q2796622>
+    a 
+        iop:StatisticalModifier ;
+    rdfs:label 
+        "average value" .
+
+<https://www.wikidata.org/entity/Q11465>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "velocity" .
+
+<https://www.wikidata.org/entity/Q165>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea" .

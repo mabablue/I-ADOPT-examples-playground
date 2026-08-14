@@ -1,0 +1,78 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+ex:someVar
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "ESPC Radial velocity (away from) standard deviation over the scatter patch of water current relative to instrument in the water body by high frequency radar" ;
+    skos:definition
+        """Standard deviation of the component of water velocity in a water body along radial lines centered at the HFR antenna, evaluated over the scatter patch""" ;
+    rdfs:comment "water current; water body; at the surface; standard deviation; over the scatter patch; sea; velocity; radial; positive away from the instrument; relative to the instrument" ;
+    ex:issue "https://github.com/mabablue/I-ADOPT-examples-playground/issues/67" ;
+    iop:hasObjectOfInterest 
+        <https://www.wikidata.org/entity/Q5195029> ;
+    iop:hasMatrix 
+        <https://www.wikidata.org/entity/Q15324> ;
+    iop:hasContextObject 
+        <https://www.wikidata.org/entity/Q165> ;
+    iop:hasStatisticalModifier 
+        <https://www.wikidata.org/entity/Q159375> ;
+    iop:hasProperty 
+        <https://www.wikidata.org/entity/Q11465> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "location: at the surface" ;
+             iop:constrains <https://www.wikidata.org/entity/Q15324> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "spatial distribution: over the scatter patch" ;
+             iop:constrains <https://www.wikidata.org/entity/Q159375> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "type: radial" ;
+             iop:constrains <https://www.wikidata.org/entity/Q11465> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "sign meaning: positive away from the instrument" ;
+             iop:constrains <https://www.wikidata.org/entity/Q11465> ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "datum: relative to instrument" ;
+             iop:constrains <https://www.wikidata.org/entity/Q11465> ;
+        ] .
+
+<https://www.wikidata.org/entity/Q5195029>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water current" .
+
+<https://www.wikidata.org/entity/Q15324>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "water body" .
+
+<https://www.wikidata.org/entity/Q159375>
+    a 
+        iop:StatisticalModifier ;
+    rdfs:label 
+        "standard deviation" .
+
+<https://www.wikidata.org/entity/Q11465>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "Velocity" .
+
+<https://www.wikidata.org/entity/Q165>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "sea" .
