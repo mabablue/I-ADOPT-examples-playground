@@ -1,0 +1,75 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+
+ex:C13
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Distance to nearest neighbour habitat patch" ;
+    rdfs:comment 
+        """Distance to nearest neighbour habitat patch to measure the degree of connection of EUNIS habitats within a landscape. https://github.com/EuropaBON/EBV-Descriptions/entity/Terrestrial-Connectivity-of-terrestrial-ecosystem-habitat-types""" ;
+    iop:hasObjectOfInterest 
+        ex:C13_OoI18 ;
+    iop:hasMatrix 
+        <https://www.wikidata.org/entity/Q25496956> ;
+    iop:hasStatisticalModifier 
+        <https://www.wikidata.org/entity/Q10585806> ;
+    iop:hasProperty 
+        <https://qudt.org/vocab/quantitykind/Distance> ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "condition: nearest neighbour" ;
+             iop:constrains ex:C13_OoI18_part2 ;
+        ] ,
+        [ a iop:Constraint ;
+             rdfs:label "subkind: specific EUNIS habitat" ;
+             iop:constrains ex:C13_OoI18 ;
+        ] .
+
+ex:C13_OoI18
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    rdfs:label 
+        "habitat patch system" ;
+    iop:hasSource 
+        ex:C13_OoI18_part1 ;
+    iop:hasTarget 
+        ex:C13_OoI18_part2 .
+
+<https://www.wikidata.org/entity/Q25496956>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "landscape region" .
+
+<https://www.wikidata.org/entity/Q10585806>
+    a 
+        iop:StatisticalModifier ;
+    rdfs:label 
+        "minimum" .
+
+<https://qudt.org/vocab/quantitykind/Distance>
+    a 
+        iop:Property ;
+    rdfs:label 
+        "distance" .
+
+ex:C13_OoI18_part1
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "habitat patch" .
+
+ex:C13_OoI18_part2
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "habitat patch" .

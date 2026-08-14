@@ -1,0 +1,56 @@
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex: <http://example.org/iadopt/challenge/> .
+@prefix iopp: <https://w3id.org/iadopt/pattern/> .
+@prefix patt: <http://example.org/iadopt/pattern> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix uom: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+
+<http://example.org/CCA/U236PPG>
+    a 
+        iop:Variable ;
+    rdfs:label 
+        "Point sources of U-236 from Pacific Proving Grounds " ;
+    skos:definition 
+        """Point sources of U-236 from Pacific Proving Grounds (U236PPG) in atoms kg-1""" ;
+    rdfs:comment 
+        """Point sources of U-236 from Pacific Proving Grounds (U236PPG) in atoms kg-1""" ;
+    ex:issue "https://github.com/mabablue/I-ADOPT-examples-playground/issues/133" ;
+    iop:hasObjectOfInterest 
+        _:b0 ;
+    iop:hasProperty 
+        _:b1 ;
+    iop:hasConstraint 
+        [ a iop:Constraint ;
+             rdfs:label "origin: Pacific Proving Grounds" ;
+             iop:constrains _:b0 ;
+        ] .
+
+_:b0
+    a 
+        iop:Entity ,
+        iop:AsymmetricSystem ;
+    iop:hasDenominator 
+        <https://www.wikidata.org/entity/Q36133> ;
+    iop:hasNumerator 
+        <https://www.wikidata.org/entity/Q5955496> .
+
+_:b1
+    a 
+        iop:Property ;
+    rdfs:label 
+        "atoms per mass" .
+
+<https://www.wikidata.org/entity/Q36133>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "soil" .
+
+<https://www.wikidata.org/entity/Q5955496>
+    a 
+        iop:Entity ;
+    rdfs:label 
+        "Uranium 236" .
