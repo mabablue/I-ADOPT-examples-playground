@@ -8,7 +8,7 @@ ex:O3
     a 
         iop:Variable ;
     rdfs:label 
-        "Ozone total column" ;
+        "ozone column molecular content" ;
     rdfs:comment 
         """2D field of total amount of O3 molecules per unit area in an atmospheric column extending from the Earth’s surface to the upper edge of the atmosphere.""" ;
     iop:hasObjectOfInterest 
@@ -23,7 +23,7 @@ _:b0
         iop:Entity ,
         iop:AsymmetricSystem ;
     iop:hasDenominator 
-        <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/> ;
+        _:b2 ;
     iop:hasNumerator 
         <http://vocab.nerc.ac.uk/collection/S27/current/CS003171/> .
 
@@ -39,11 +39,11 @@ _:b1
     rdfs:label 
         "aeric amount of subanstance" .
 
-<http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
+_:b2
     a 
         iop:Entity ;
     rdfs:label 
-        "ground surface" .
+        "atmospheric column" .
 
 <http://vocab.nerc.ac.uk/collection/S27/current/CS003171/>
     a 
