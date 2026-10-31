@@ -16,12 +16,7 @@ ex:O3
     iop:hasMatrix 
         <http://vocab.nerc.ac.uk/collection/S21/current/S21S001/> ;
     iop:hasProperty 
-        _:b1 ;
-    iop:hasConstraint 
-        [ a iop:Constraint ;
-             rdfs:label "defined by: measured from Earth's surface to the upper edge of the atmosphere" ;
-             iop:constrains _:b1 ;
-        ] .
+        _:b1 .
 
 _:b0
     a 
@@ -42,7 +37,7 @@ _:b1
     a 
         iop:Property ;
     rdfs:label 
-        "moles per area" .
+        "aeric amount of subanstance" .
 
 <http://vocab.nerc.ac.uk/collection/S20/current/S2000011/>
     a 
