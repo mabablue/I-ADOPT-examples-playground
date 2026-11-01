@@ -37,7 +37,7 @@ _:b1
     a 
         iop:Property ;
     rdfs:label 
-        "aeric amount of subanstance" .
+        "aeric amount of substance" .
 
 _:b2
     a 
